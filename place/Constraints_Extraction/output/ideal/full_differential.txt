@@ -1,0 +1,44 @@
+group0 3 M7 M10 M14 M15 M8 M9
+2 M7 M10
+2 M14 M15
+2 M8 M9
+
+group1 3 I23 I40 I21 I22
+2 I23 I40
+2 I21 I22
+
+group2 1 M1 M2
+
+group3 3 C0 C1 C8 C6
+2 C0 C1
+2 C8 C6
+
+group4 3 I25 I28 I29 I30 I26 I27 I31 I32
+2 I25 I28
+2 I29 I30
+2 I26 I27
+2 I31 I32
+
+group5 7 M0
+
+group6 3 M5 M3 M6 M4
+2 M5 M3
+2 M6 M4
+
+group7 3 group0 group1 group2
+2 group0 group0
+2 group1 group1
+2 group2 group2
+
+group8 3 group3 group4
+2 group3 group3
+2 group4 group4
+
+group9 3 group5 group6
+2 group5 group5
+2 group6 group6
+
+group10 3 group7 group8 group9
+2 group7 group7
+2 group8 group8
+2 group9 group9

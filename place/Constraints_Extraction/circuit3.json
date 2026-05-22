@@ -1,0 +1,16 @@
+{
+    "root_dir" : "./",
+    "spice_path" : "./circuit_data/RF_data/spice/train/",
+    "netlist" : "2380.sp",
+    "out_dir" : "./output/",
+    "data_type" : "",
+    "file_name" : "data_graph",
+    "subgraphmatchexe" : "./SubgraphMatching.out",
+    "query_path" : "./circuit_data/source_files/dataset_generator/rf_data_generator/ota/",
+    "query_netlist" : "cr1_1.sp",
+    "mapout_path" : "./output/",
+    "filter_type" :  "GQL",
+    "order_type" : "GQL",
+    "engine_type" : "GQL",
+    "num_type" : "MAX"
+}

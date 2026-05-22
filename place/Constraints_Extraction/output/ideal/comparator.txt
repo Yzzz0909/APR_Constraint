@@ -1,0 +1,20 @@
+ckt comparator_A
+
+group0 3 M1 M0 M4 M9 M8 M10
+2 M1 M0
+2 M4 M9
+2 M8 M10
+
+group1 3 M6 M7 M3 M2
+2 M6 M7
+2 M3 M2
+
+group2 7 M5
+
+group3 7 I1
+
+group4 3 group0 group1 group2 group3
+2 group0 group0
+2 group1 group1
+2 group2 group2
+2 group3 group3

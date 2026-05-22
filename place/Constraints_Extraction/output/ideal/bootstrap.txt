@@ -1,0 +1,12 @@
+group0 11 C0 1
+group1 3 M21 M22
+2 M21 M21
+2 M22 M22
+group2 6 M10 M12 M0 M8 M20
+group3 6 M11 M19 M18 M1 M17
+
+group4 6 group2 group3 group1
+
+group5 3 group0 group4
+2 group0 group0
+2 group4 group4

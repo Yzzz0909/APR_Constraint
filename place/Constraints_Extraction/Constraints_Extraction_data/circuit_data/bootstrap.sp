@@ -1,0 +1,43 @@
+** Generated for: hspiceD
+** Generated on: Feb 27 16:44:10 2026
+** Design library name: sdadc
+** Design cell name: bootstrap_switch_111
+** Design view name: schematic
+
+
+.TEMP 25.0
+.OPTION     ARTIST=2     INGOLD=2     PARHIER=LOCAL     PSF=2
+.LIB "/opt/PDK/smic18mserf_1833_oa_cds_v1.11_0/models/hspice/ms018_enhanced_v1p11.lib" TT
+.LIB "/opt/PDK/smic18mserf_1833_oa_cds_v1.11_0/models/hspice/ms018_enhanced_v1p11.lib" BJT_TT
+.LIB "/opt/PDK/smic18mserf_1833_oa_cds_v1.11_0/models/hspice/ms018_enhanced_v1p11.lib" DIO_TT
+.LIB "/opt/PDK/smic18mserf_1833_oa_cds_v1.11_0/models/hspice/ms018_enhanced_v1p11.lib" RES_TT
+.LIB "/opt/PDK/smic18mserf_1833_oa_cds_v1.11_0/models/hspice/ms018_enhanced_v1p11.lib" MIM_TT
+.LIB "/opt/PDK/smic18mserf_1833_oa_cds_v1.11_0/models/hspice/ms018_enhanced_v1p11.lib" VAR_TT
+.LIB "/opt/PDK/smic18mserf_1833_oa_cds_v1.11_0/models/hspice/mse018_v1p11_rf.lib" TT
+.LIB "/opt/PDK/smic18mserf_1833_oa_cds_v1.11_0/models/hspice/mse018_v1p11_rf.lib" RES_TT
+.LIB "/opt/PDK/smic18mserf_1833_oa_cds_v1.11_0/models/hspice/mse018_v1p11_rf.lib" MIM_TT
+.LIB "/opt/PDK/smic18mserf_1833_oa_cds_v1.11_0/models/hspice/mse018_v1p11_rf.lib" VAR_TT
+.LIB "/opt/PDK/smic18mserf_1833_oa_cds_v1.11_0/models/hspice/mse018_v1p11_rf.lib" IND_RF_PSUB_TT
+.LIB "/opt/PDK/smic18mserf_1833_oa_cds_v1.11_0/models/hspice/mse018_v1p11_rf.lib" IND_RF_TT
+.LIB "/opt/PDK/smic18mserf_1833_oa_cds_v1.11_0/models/hspice/mse018_v1p11_rf.lib" 3TDIFF_PSUB_TT
+.LIB "/opt/PDK/smic18mserf_1833_oa_cds_v1.11_0/models/hspice/mse018_v1p11_rf.lib" 3TDIFF_TT
+.LIB "/opt/PDK/smic18mserf_1833_oa_cds_v1.11_0/models/hspice/mse018_v1p11_rf.lib" 2TDIFF_PSUB_TT
+.LIB "/opt/PDK/smic18mserf_1833_oa_cds_v1.11_0/models/hspice/mse018_v1p11_rf.lib" 2TDIFF_TT
+
+** Library name: sdadc
+** Cell name: bootstrap_switch_111
+** View name: schematic
+m0 ena_b ena vdd vdd p33 m=1 w=1.5e-6 l=300e-9 nf=1 ad=720e-15 as=720e-15 pd=3.96e-6 ps=3.96e-6 nrd=180e-3 nrs=180e-3 sa=480e-9 sb=480e-9 sd=0 sca=0 scb=0 scc=0
+m12 net9 ena_b vdd vdd p33 m=1 w=1e-6 l=300e-9 nf=1 ad=480e-15 as=480e-15 pd=2.96e-6 ps=2.96e-6 nrd=270e-3 nrs=270e-3 sa=480e-9 sb=480e-9 sd=0 sca=0 scb=0 scc=0
+m20 net04 net11 vdd net04 p33 m=1 w=300e-9 l=300e-9 nf=1 ad=206.4e-15 as=206.4e-15 pd=1.88e-6 ps=1.88e-6 nrd=1.03333 nrs=1.03333 sa=520e-9 sb=520e-9 sd=0 sca=0 scb=0 scc=0
+m10 net010 ena vdd vdd p33 m=1 w=600e-9 l=300e-9 nf=1 ad=288e-15 as=288e-15 pd=2.16e-6 ps=2.16e-6 nrd=450e-3 nrs=450e-3 sa=480e-9 sb=480e-9 sd=0 sca=0 scb=0 scc=0
+m8 net11 net010 net04 net04 p33 m=1 w=5e-6 l=350e-9 nf=1 ad=2.4e-12 as=2.4e-12 pd=10.96e-6 ps=10.96e-6 nrd=54e-3 nrs=54e-3 sa=480e-9 sb=480e-9 sd=0 sca=0 scb=0 scc=0
+m1 ena_b ena gnd gnd n33 m=1 w=1.165e-6 l=350e-9 nf=1 ad=559.2e-15 as=559.2e-15 pd=3.29e-6 ps=3.29e-6 nrd=231.76e-3 nrs=231.76e-3 sa=480e-9 sb=480e-9 sd=0 sca=0 scb=0 scc=0
+m17 net11 vdd net9 gnd n33 m=1 w=5e-6 l=350e-9 nf=1 ad=2.4e-12 as=2.4e-12 pd=10.96e-6 ps=10.96e-6 nrd=54e-3 nrs=54e-3 sa=480e-9 sb=480e-9 sd=0 sca=0 scb=0 scc=0
+m22 net010 ena net4 gnd n33 m=1 w=300e-9 l=350e-9 nf=1 ad=206.4e-15 as=206.4e-15 pd=1.88e-6 ps=1.88e-6 nrd=1.03333 nrs=1.03333 sa=520e-9 sb=520e-9 sd=0 sca=0 scb=0 scc=0
+m21 v2 net11 v1 gnd n33 m=1 w=350e-9 l=350e-9 nf=1 ad=211.4e-15 as=211.4e-15 pd=1.88e-6 ps=1.88e-6 nrd=885.714e-3 nrs=885.714e-3 sa=520e-9 sb=520e-9 sd=0 sca=0 scb=0 scc=0
+m18 net9 ena_b gnd gnd n33 m=1 w=350e-9 l=350e-9 nf=1 ad=211.4e-15 as=211.4e-15 pd=1.88e-6 ps=1.88e-6 nrd=885.714e-3 nrs=885.714e-3 sa=520e-9 sb=520e-9 sd=0 sca=0 scb=0 scc=0
+m19 v1 net11 net4 gnd n33 m=1 w=1e-6 l=350e-9 nf=1 ad=480e-15 as=480e-15 pd=2.96e-6 ps=2.96e-6 nrd=270e-3 nrs=270e-3 sa=480e-9 sb=480e-9 sd=0 sca=0 scb=0 scc=0
+m11 net4 ena_b gnd gnd n33 m=1 w=5e-6 l=350e-9 nf=1 ad=2.4e-12 as=2.4e-12 pd=10.96e-6 ps=10.96e-6 nrd=54e-3 nrs=54e-3 sa=480e-9 sb=480e-9 sd=0 sca=0 scb=0 scc=0
+c0 net04 net4 mim w=28.9e-6 l=15e-6 m=1
+.END

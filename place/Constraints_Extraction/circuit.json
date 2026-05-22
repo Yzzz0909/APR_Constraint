@@ -1,0 +1,15 @@
+{
+    "root_dir": "./",
+    "spice_path": "/home/yangzhe/work/place/Constraints_Extraction/Constraints_Extraction_data/circuit_data/",
+    "netlist": "full_differential.sp",
+    "out_dir": "/home/yangzhe/work/place/Constraints_Extraction/output/",
+    "data_type": "",
+    "file_name": "data_graph",
+    "subgraphmatchexe": "/home/yangzhe/work/place/SubgraphMatching-master/build/matching/SubgraphMatching.out",
+    "query_path": "/home/yangzhe/work/place/Constraints_Extraction/Constraints_Extraction_data/query_graph/",
+    "mapout_path": "/home/yangzhe/work/place/Constraints_Extraction/output/real",
+    "filter_type": "GQL",
+    "order_type": "GQL",
+    "engine_type": "GQL",
+    "num_type": "MAX"
+}

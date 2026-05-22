@@ -1,0 +1,82 @@
+** Generated for: hspiceD
+** Generated on: Feb 12 12:12:45 2026
+** Design library name: sdadc
+** Design cell name: full_differential_A_no_bias
+** Design view name: schematic
+
+
+.TEMP 25.0
+.OPTION
++    ARTIST=2
++    INGOLD=2
++    PARHIER=LOCAL
++    PSF=2
+.LIB "/opt/PDK/smic18mserf_1833_oa_cds_v1.11_0/models/hspice/ms018_enhanced_v1p11.lib" TT
+.LIB "/opt/PDK/smic18mserf_1833_oa_cds_v1.11_0/models/hspice/ms018_enhanced_v1p11.lib" BJT_TT
+.LIB "/opt/PDK/smic18mserf_1833_oa_cds_v1.11_0/models/hspice/ms018_enhanced_v1p11.lib" DIO_TT
+.LIB "/opt/PDK/smic18mserf_1833_oa_cds_v1.11_0/models/hspice/ms018_enhanced_v1p11.lib" RES_TT
+.LIB "/opt/PDK/smic18mserf_1833_oa_cds_v1.11_0/models/hspice/ms018_enhanced_v1p11.lib" MIM_TT
+.LIB "/opt/PDK/smic18mserf_1833_oa_cds_v1.11_0/models/hspice/ms018_enhanced_v1p11.lib" VAR_TT
+.LIB "/opt/PDK/smic18mserf_1833_oa_cds_v1.11_0/models/hspice/mse018_v1p11_rf.lib" TT
+.LIB "/opt/PDK/smic18mserf_1833_oa_cds_v1.11_0/models/hspice/mse018_v1p11_rf.lib" RES_TT
+.LIB "/opt/PDK/smic18mserf_1833_oa_cds_v1.11_0/models/hspice/mse018_v1p11_rf.lib" MIM_TT
+.LIB "/opt/PDK/smic18mserf_1833_oa_cds_v1.11_0/models/hspice/mse018_v1p11_rf.lib" VAR_TT
+.LIB "/opt/PDK/smic18mserf_1833_oa_cds_v1.11_0/models/hspice/mse018_v1p11_rf.lib" IND_RF_PSUB_TT
+.LIB "/opt/PDK/smic18mserf_1833_oa_cds_v1.11_0/models/hspice/mse018_v1p11_rf.lib" IND_RF_TT
+.LIB "/opt/PDK/smic18mserf_1833_oa_cds_v1.11_0/models/hspice/mse018_v1p11_rf.lib" 3TDIFF_PSUB_TT
+.LIB "/opt/PDK/smic18mserf_1833_oa_cds_v1.11_0/models/hspice/mse018_v1p11_rf.lib" 3TDIFF_TT
+.LIB "/opt/PDK/smic18mserf_1833_oa_cds_v1.11_0/models/hspice/mse018_v1p11_rf.lib" 2TDIFF_PSUB_TT
+.LIB "/opt/PDK/smic18mserf_1833_oa_cds_v1.11_0/models/hspice/mse018_v1p11_rf.lib" 2TDIFF_TT
+
+** Library name: sdadc
+** Cell name: inverter_B
+** View name: schematic
+.subckt inverter_B gnd in out vdd
+m0 out in vdd vdd p33 m=1 w=900e-9 l=350e-9 nf=1 ad=432e-15 as=432e-15 pd=2.76e-6 ps=2.76e-6 nrd=300e-3 nrs=300e-3 sa=480e-9 sb=480e-9 sd=0 sca=0 scb=0 scc=0
+m1 out in gnd gnd n33 m=1 w=600e-9 l=350e-9 nf=1 ad=288e-15 as=288e-15 pd=2.16e-6 ps=2.16e-6 nrd=450e-3 nrs=450e-3 sa=480e-9 sb=480e-9 sd=0 sca=0 scb=0 scc=0
+.ends inverter_B
+** End of subcircuit definition.
+
+** Library name: sdadc
+** Cell name: switch_A
+** View name: schematic
+.subckt switch_A ena gnda v1 v2 vdda
+m1 v1 ena v2 gnda n33 m=1 w=500e-9 l=350e-9 nf=1 ad=240e-15 as=240e-15 pd=1.96e-6 ps=1.96e-6 nrd=540e-3 nrs=540e-3 sa=480e-9 sb=480e-9 sd=0 sca=0 scb=0 scc=0
+xi3 gnda ena ena_ vdda inverter_B
+m15 v2 ena_ v1 vdda p33 m=1 w=2e-6 l=350e-9 nf=2 ad=540e-15 as=960e-15 pd=3.08e-6 ps=5.92e-6 nrd=135e-3 nrs=135e-3 sa=480e-9 sb=480e-9 sd=540e-9 sca=0 scb=0 scc=0
+.ends switch_A
+** End of subcircuit definition.
+
+** Library name: sdadc
+** Cell name: full_differential_A_no_bias
+** View name: schematic
+m6 net13 vbn1 gnd gnd n33 m=1 w=2.9e-6 l=1e-6 nf=1 ad=1.392e-12 as=1.392e-12 pd=6.76e-6 ps=6.76e-6 nrd=93.1034e-3 nrs=93.1034e-3 sa=480e-9 sb=480e-9 sd=0 sca=0 scb=0 scc=0
+m5 voutp vbn2 net13 gnd n33 m=1 w=12e-6 l=1e-6 nf=3 ad=4.08e-12 as=4.08e-12 pd=18.04e-6 ps=18.04e-6 nrd=22.5e-3 nrs=22.5e-3 sa=480e-9 sb=480e-9 sd=540e-9 sca=0 scb=0 scc=0
+m4 net21 vbn1 gnd gnd n33 m=1 w=2.9e-6 l=1e-6 nf=1 ad=1.392e-12 as=1.392e-12 pd=6.76e-6 ps=6.76e-6 nrd=93.1034e-3 nrs=93.1034e-3 sa=480e-9 sb=480e-9 sd=0 sca=0 scb=0 scc=0
+m3 voutn vbn2 net21 gnd n33 m=1 w=12e-6 l=1e-6 nf=3 ad=4.08e-12 as=4.08e-12 pd=18.04e-6 ps=18.04e-6 nrd=22.5e-3 nrs=22.5e-3 sa=480e-9 sb=480e-9 sd=540e-9 sca=0 scb=0 scc=0
+m2 net44 vinp net25 gnd n33 m=4 w=1.15e-6 l=1e-6 nf=1 ad=552e-15 as=552e-15 pd=3.26e-6 ps=3.26e-6 nrd=234.783e-3 nrs=234.783e-3 sa=480e-9 sb=480e-9 sd=0 sca=0 scb=0 scc=0
+m1 net32 vinn net25 gnd n33 m=4 w=1.15e-6 l=1e-6 nf=1 ad=552e-15 as=552e-15 pd=3.26e-6 ps=3.26e-6 nrd=234.783e-3 nrs=234.783e-3 sa=480e-9 sb=480e-9 sd=0 sca=0 scb=0 scc=0
+m0 net25 vbn1 gnd gnd n33 m=1 w=6e-6 l=1e-6 nf=2 ad=1.62e-12 as=2.88e-12 pd=7.08e-6 ps=13.92e-6 nrd=45e-3 nrs=45e-3 sa=480e-9 sb=480e-9 sd=540e-9 sca=0 scb=0 scc=0
+m15 net44 vbp1 vdd vdd p33 m=1 w=7.85e-6 l=1e-6 nf=2 ad=2.1195e-12 as=3.768e-12 pd=8.93e-6 ps=17.62e-6 nrd=34.3949e-3 nrs=34.3949e-3 sa=480e-9 sb=480e-9 sd=540e-9 sca=0 scb=0 scc=0
+m14 net32 vbp1 vdd vdd p33 m=1 w=7.85e-6 l=1e-6 nf=2 ad=2.1195e-12 as=3.768e-12 pd=8.93e-6 ps=17.62e-6 nrd=34.3949e-3 nrs=34.3949e-3 sa=480e-9 sb=480e-9 sd=540e-9 sca=0 scb=0 scc=0
+m10 net44 vbiasp1 vdd vdd p33 m=1 w=7.85e-6 l=1e-6 nf=2 ad=2.1195e-12 as=3.768e-12 pd=8.93e-6 ps=17.62e-6 nrd=34.3949e-3 nrs=34.3949e-3 sa=480e-9 sb=480e-9 sd=540e-9 sca=0 scb=0 scc=0
+m9 voutn vbp2 net44 vdd p33 m=1 w=18e-6 l=1e-6 nf=5 ad=5.616e-12 as=5.616e-12 pd=24.72e-6 ps=24.72e-6 nrd=15e-3 nrs=15e-3 sa=480e-9 sb=480e-9 sd=540e-9 sca=0 scb=0 scc=0
+m8 voutp vbp2 net32 vdd p33 m=1 w=18e-6 l=1e-6 nf=5 ad=5.616e-12 as=5.616e-12 pd=24.72e-6 ps=24.72e-6 nrd=15e-3 nrs=15e-3 sa=480e-9 sb=480e-9 sd=540e-9 sca=0 scb=0 scc=0
+m7 net32 vbiasp1 vdd vdd p33 m=1 w=7.85e-6 l=1e-6 nf=2 ad=2.1195e-12 as=3.768e-12 pd=8.93e-6 ps=17.62e-6 nrd=34.3949e-3 nrs=34.3949e-3 sa=480e-9 sb=480e-9 sd=540e-9 sca=0 scb=0 scc=0
+xi27 clk1 gnd voutp net026 vdd switch_A
+xi32 clk1 gnd voutn net030 vdd switch_A
+xi40 clk1 gnd vo1 vbiasp1 vdd switch_A
+xi23 clk2 gnd vo2 vbiasp1 vdd switch_A
+xi21 clk1 gnd vo2 vbp1 vdd switch_A
+xi22 clk2 gnd vo1 vbp1 vdd switch_A
+xi29 clk1 gnd net028 vcm vdd switch_A
+xi26 clk2 gnd voutp net023 vdd switch_A
+xi28 clk2 gnd net026 vcm vdd switch_A
+xi31 clk2 gnd voutn net028 vdd switch_A
+xi25 clk1 gnd net023 vcm vdd switch_A
+xi30 clk2 gnd net030 vcm vdd switch_A
+c8 vo2 net028 mim w=30e-6 l=17.2e-6 m=1
+c6 vo1 net030 mim w=30e-6 l=17.2e-6 m=1
+c1 vo1 net026 mim w=30e-6 l=17.2e-6 m=1
+c0 vo2 net023 mim w=30e-6 l=17.2e-6 m=1
+.END
