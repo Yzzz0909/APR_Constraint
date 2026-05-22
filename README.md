@@ -124,12 +124,6 @@ cd work/place/Constraints_Extraction
 python spice_annotation.py circuit.json
 ```
 
-本地测试配置：
-
-```bash
-python spice_annotation.py circuit_local_test.json
-```
-
 ## 工作流程
 
 ```text
