@@ -34049,3 +34049,544 @@ INFO:root:Net net023 internal to subckt
 DEBUG:root:Node name full_differential_c0 type: cap
 INFO:root:Total no of nodes in design full_differential= 65
 INFO:root:Creating bipartitie graph with Total no of devices 65
+DEBUG:matplotlib:matplotlib data path: /home/yangzhe/.venv/lib/python3.12/site-packages/matplotlib/mpl-data
+DEBUG:matplotlib:CONFIGDIR=/home/yangzhe/.config/matplotlib
+DEBUG:matplotlib:interactive is False
+DEBUG:matplotlib:platform is linux
+DEBUG:matplotlib:CACHEDIR=/home/yangzhe/.cache/matplotlib
+DEBUG:matplotlib.font_manager:Using fontManager instance from /home/yangzhe/.cache/matplotlib/fontlist-v390.json
+INFO:root:creating an instance of spiceParser
+INFO:root:started reading subckt: .subckt inverter_B gnd in out vdd
+
+INFO:root:FOUND transistor
+INFO:root:FOUND transistor
+INFO:root:Finished reading subckt inverter_B
+INFO:root:started reading subckt: .subckt switch_A ena gnda v1 v2 vdda
+
+INFO:root:FOUND transistor
+INFO:root:FOUND subckt instance: inverter_B
+INFO:root:FOUND transistor
+INFO:root:Finished reading subckt switch_A
+INFO:root:FOUND transistor
+INFO:root:FOUND transistor
+INFO:root:FOUND transistor
+INFO:root:FOUND transistor
+INFO:root:FOUND transistor
+INFO:root:FOUND transistor
+INFO:root:FOUND transistor
+INFO:root:FOUND transistor
+INFO:root:FOUND transistor
+INFO:root:FOUND transistor
+INFO:root:FOUND transistor
+INFO:root:FOUND transistor
+INFO:root:FOUND transistor
+INFO:root:FOUND subckt instance: switch_A
+INFO:root:FOUND subckt instance: switch_A
+INFO:root:FOUND subckt instance: switch_A
+INFO:root:FOUND subckt instance: switch_A
+INFO:root:FOUND subckt instance: switch_A
+INFO:root:FOUND subckt instance: switch_A
+INFO:root:FOUND subckt instance: switch_A
+INFO:root:FOUND subckt instance: switch_A
+INFO:root:FOUND subckt instance: switch_A
+INFO:root:FOUND subckt instance: switch_A
+INFO:root:FOUND subckt instance: switch_A
+INFO:root:FOUND subckt instance: switch_A
+INFO:root:FOUND cap
+INFO:root:FOUND cap
+INFO:root:FOUND cap
+INFO:root:FOUND cap
+INFO:root:NO subckt defined, checking for any instance at top
+INFO:root:Instances found at top, creating a dummy __top__ subckt
+INFO:root:List of subckts in design inverter_B switch_A full_differential
+INFO:root:flattening the circuit full_differential
+INFO:root:Net net13 internal to subckt
+INFO:root:Net vbn1 internal to subckt
+INFO:root:Net gnd internal to subckt
+DEBUG:root:Node name full_differential_m6 type: nmos
+INFO:root:Net voutp internal to subckt
+INFO:root:Net vbn2 internal to subckt
+INFO:root:Net net13 internal to subckt
+DEBUG:root:Node name full_differential_m5 type: nmos
+INFO:root:Net net21 internal to subckt
+INFO:root:Net vbn1 internal to subckt
+INFO:root:Net gnd internal to subckt
+DEBUG:root:Node name full_differential_m4 type: nmos
+INFO:root:Net voutn internal to subckt
+INFO:root:Net vbn2 internal to subckt
+INFO:root:Net net21 internal to subckt
+DEBUG:root:Node name full_differential_m3 type: nmos
+INFO:root:Net net44 internal to subckt
+INFO:root:Net vinp internal to subckt
+INFO:root:Net net25 internal to subckt
+DEBUG:root:Node name full_differential_m2 type: nmos
+INFO:root:Net net32 internal to subckt
+INFO:root:Net vinn internal to subckt
+INFO:root:Net net25 internal to subckt
+DEBUG:root:Node name full_differential_m1 type: nmos
+INFO:root:Net net25 internal to subckt
+INFO:root:Net vbn1 internal to subckt
+INFO:root:Net gnd internal to subckt
+DEBUG:root:Node name full_differential_m0 type: nmos
+INFO:root:Net net44 internal to subckt
+INFO:root:Net vbp1 internal to subckt
+INFO:root:Net vdd existing in top level
+DEBUG:root:Node name full_differential_m15 type: pmos
+INFO:root:Net net32 internal to subckt
+INFO:root:Net vbp1 internal to subckt
+INFO:root:Net vdd existing in top level
+DEBUG:root:Node name full_differential_m14 type: pmos
+INFO:root:Net net44 internal to subckt
+INFO:root:Net vbiasp1 internal to subckt
+INFO:root:Net vdd existing in top level
+DEBUG:root:Node name full_differential_m10 type: pmos
+INFO:root:Net voutn internal to subckt
+INFO:root:Net vbp2 internal to subckt
+INFO:root:Net net44 internal to subckt
+DEBUG:root:Node name full_differential_m9 type: pmos
+INFO:root:Net voutp internal to subckt
+INFO:root:Net vbp2 internal to subckt
+INFO:root:Net net32 internal to subckt
+DEBUG:root:Node name full_differential_m8 type: pmos
+INFO:root:Net net32 internal to subckt
+INFO:root:Net vbiasp1 internal to subckt
+INFO:root:Net vdd existing in top level
+DEBUG:root:Node name full_differential_m7 type: pmos
+INFO:root:Net clk1 internal to subckt
+INFO:root:Net gnd internal to subckt
+INFO:root:Net voutp internal to subckt
+INFO:root:Net net026 internal to subckt
+INFO:root:Net vdd existing in top level
+INFO:root:flattening the circuit switch_A
+INFO:root:Net v1 is part of higher level subckt
+INFO:root:Net ena is part of higher level subckt
+INFO:root:Net v2 is part of higher level subckt
+DEBUG:root:Node name xi27|switch_A_m1 type: nmos
+INFO:root:Net gnda is part of higher level subckt
+INFO:root:Net ena is part of higher level subckt
+INFO:root:Net ena_ internal to subckt
+INFO:root:Net vdda is part of higher level subckt
+INFO:root:flattening the circuit inverter_B
+INFO:root:Net out is part of higher level subckt
+INFO:root:Net in is part of higher level subckt
+INFO:root:Net vdd is part of higher level subckt
+DEBUG:root:Node name xi27|xi3|inverter_B_m0 type: pmos
+INFO:root:Net out is part of higher level subckt
+INFO:root:Net in is part of higher level subckt
+INFO:root:Net gnd is part of higher level subckt
+DEBUG:root:Node name xi27|xi3|inverter_B_m1 type: nmos
+INFO:root:Total no of nodes in design inverter_B= 2
+INFO:root:Net v2 is part of higher level subckt
+INFO:root:Net ena_ internal to subckt
+INFO:root:Net v1 is part of higher level subckt
+DEBUG:root:Node name xi27|switch_A_m15 type: pmos
+INFO:root:Total no of nodes in design switch_A= 4
+INFO:root:Net clk1 internal to subckt
+INFO:root:Net gnd internal to subckt
+INFO:root:Net voutn internal to subckt
+INFO:root:Net net030 internal to subckt
+INFO:root:Net vdd existing in top level
+INFO:root:flattening the circuit switch_A
+INFO:root:Net v1 is part of higher level subckt
+INFO:root:Net ena is part of higher level subckt
+INFO:root:Net v2 is part of higher level subckt
+DEBUG:root:Node name xi32|switch_A_m1 type: nmos
+INFO:root:Net gnda is part of higher level subckt
+INFO:root:Net ena is part of higher level subckt
+INFO:root:Net ena_ internal to subckt
+INFO:root:Net vdda is part of higher level subckt
+INFO:root:flattening the circuit inverter_B
+INFO:root:Net out is part of higher level subckt
+INFO:root:Net in is part of higher level subckt
+INFO:root:Net vdd is part of higher level subckt
+DEBUG:root:Node name xi32|xi3|inverter_B_m0 type: pmos
+INFO:root:Net out is part of higher level subckt
+INFO:root:Net in is part of higher level subckt
+INFO:root:Net gnd is part of higher level subckt
+DEBUG:root:Node name xi32|xi3|inverter_B_m1 type: nmos
+INFO:root:Total no of nodes in design inverter_B= 2
+INFO:root:Net v2 is part of higher level subckt
+INFO:root:Net ena_ internal to subckt
+INFO:root:Net v1 is part of higher level subckt
+DEBUG:root:Node name xi32|switch_A_m15 type: pmos
+INFO:root:Total no of nodes in design switch_A= 4
+INFO:root:Net clk1 internal to subckt
+INFO:root:Net gnd internal to subckt
+INFO:root:Net vo1 internal to subckt
+INFO:root:Net vbiasp1 internal to subckt
+INFO:root:Net vdd existing in top level
+INFO:root:flattening the circuit switch_A
+INFO:root:Net v1 is part of higher level subckt
+INFO:root:Net ena is part of higher level subckt
+INFO:root:Net v2 is part of higher level subckt
+DEBUG:root:Node name xi40|switch_A_m1 type: nmos
+INFO:root:Net gnda is part of higher level subckt
+INFO:root:Net ena is part of higher level subckt
+INFO:root:Net ena_ internal to subckt
+INFO:root:Net vdda is part of higher level subckt
+INFO:root:flattening the circuit inverter_B
+INFO:root:Net out is part of higher level subckt
+INFO:root:Net in is part of higher level subckt
+INFO:root:Net vdd is part of higher level subckt
+DEBUG:root:Node name xi40|xi3|inverter_B_m0 type: pmos
+INFO:root:Net out is part of higher level subckt
+INFO:root:Net in is part of higher level subckt
+INFO:root:Net gnd is part of higher level subckt
+DEBUG:root:Node name xi40|xi3|inverter_B_m1 type: nmos
+INFO:root:Total no of nodes in design inverter_B= 2
+INFO:root:Net v2 is part of higher level subckt
+INFO:root:Net ena_ internal to subckt
+INFO:root:Net v1 is part of higher level subckt
+DEBUG:root:Node name xi40|switch_A_m15 type: pmos
+INFO:root:Total no of nodes in design switch_A= 4
+INFO:root:Net clk2 internal to subckt
+INFO:root:Net gnd internal to subckt
+INFO:root:Net vo2 internal to subckt
+INFO:root:Net vbiasp1 internal to subckt
+INFO:root:Net vdd existing in top level
+INFO:root:flattening the circuit switch_A
+INFO:root:Net v1 is part of higher level subckt
+INFO:root:Net ena is part of higher level subckt
+INFO:root:Net v2 is part of higher level subckt
+DEBUG:root:Node name xi23|switch_A_m1 type: nmos
+INFO:root:Net gnda is part of higher level subckt
+INFO:root:Net ena is part of higher level subckt
+INFO:root:Net ena_ internal to subckt
+INFO:root:Net vdda is part of higher level subckt
+INFO:root:flattening the circuit inverter_B
+INFO:root:Net out is part of higher level subckt
+INFO:root:Net in is part of higher level subckt
+INFO:root:Net vdd is part of higher level subckt
+DEBUG:root:Node name xi23|xi3|inverter_B_m0 type: pmos
+INFO:root:Net out is part of higher level subckt
+INFO:root:Net in is part of higher level subckt
+INFO:root:Net gnd is part of higher level subckt
+DEBUG:root:Node name xi23|xi3|inverter_B_m1 type: nmos
+INFO:root:Total no of nodes in design inverter_B= 2
+INFO:root:Net v2 is part of higher level subckt
+INFO:root:Net ena_ internal to subckt
+INFO:root:Net v1 is part of higher level subckt
+DEBUG:root:Node name xi23|switch_A_m15 type: pmos
+INFO:root:Total no of nodes in design switch_A= 4
+INFO:root:Net clk1 internal to subckt
+INFO:root:Net gnd internal to subckt
+INFO:root:Net vo2 internal to subckt
+INFO:root:Net vbp1 internal to subckt
+INFO:root:Net vdd existing in top level
+INFO:root:flattening the circuit switch_A
+INFO:root:Net v1 is part of higher level subckt
+INFO:root:Net ena is part of higher level subckt
+INFO:root:Net v2 is part of higher level subckt
+DEBUG:root:Node name xi21|switch_A_m1 type: nmos
+INFO:root:Net gnda is part of higher level subckt
+INFO:root:Net ena is part of higher level subckt
+INFO:root:Net ena_ internal to subckt
+INFO:root:Net vdda is part of higher level subckt
+INFO:root:flattening the circuit inverter_B
+INFO:root:Net out is part of higher level subckt
+INFO:root:Net in is part of higher level subckt
+INFO:root:Net vdd is part of higher level subckt
+DEBUG:root:Node name xi21|xi3|inverter_B_m0 type: pmos
+INFO:root:Net out is part of higher level subckt
+INFO:root:Net in is part of higher level subckt
+INFO:root:Net gnd is part of higher level subckt
+DEBUG:root:Node name xi21|xi3|inverter_B_m1 type: nmos
+INFO:root:Total no of nodes in design inverter_B= 2
+INFO:root:Net v2 is part of higher level subckt
+INFO:root:Net ena_ internal to subckt
+INFO:root:Net v1 is part of higher level subckt
+DEBUG:root:Node name xi21|switch_A_m15 type: pmos
+INFO:root:Total no of nodes in design switch_A= 4
+INFO:root:Net clk2 internal to subckt
+INFO:root:Net gnd internal to subckt
+INFO:root:Net vo1 internal to subckt
+INFO:root:Net vbp1 internal to subckt
+INFO:root:Net vdd existing in top level
+INFO:root:flattening the circuit switch_A
+INFO:root:Net v1 is part of higher level subckt
+INFO:root:Net ena is part of higher level subckt
+INFO:root:Net v2 is part of higher level subckt
+DEBUG:root:Node name xi22|switch_A_m1 type: nmos
+INFO:root:Net gnda is part of higher level subckt
+INFO:root:Net ena is part of higher level subckt
+INFO:root:Net ena_ internal to subckt
+INFO:root:Net vdda is part of higher level subckt
+INFO:root:flattening the circuit inverter_B
+INFO:root:Net out is part of higher level subckt
+INFO:root:Net in is part of higher level subckt
+INFO:root:Net vdd is part of higher level subckt
+DEBUG:root:Node name xi22|xi3|inverter_B_m0 type: pmos
+INFO:root:Net out is part of higher level subckt
+INFO:root:Net in is part of higher level subckt
+INFO:root:Net gnd is part of higher level subckt
+DEBUG:root:Node name xi22|xi3|inverter_B_m1 type: nmos
+INFO:root:Total no of nodes in design inverter_B= 2
+INFO:root:Net v2 is part of higher level subckt
+INFO:root:Net ena_ internal to subckt
+INFO:root:Net v1 is part of higher level subckt
+DEBUG:root:Node name xi22|switch_A_m15 type: pmos
+INFO:root:Total no of nodes in design switch_A= 4
+INFO:root:Net clk1 internal to subckt
+INFO:root:Net gnd internal to subckt
+INFO:root:Net net028 internal to subckt
+INFO:root:Net vcm internal to subckt
+INFO:root:Net vdd existing in top level
+INFO:root:flattening the circuit switch_A
+INFO:root:Net v1 is part of higher level subckt
+INFO:root:Net ena is part of higher level subckt
+INFO:root:Net v2 is part of higher level subckt
+DEBUG:root:Node name xi29|switch_A_m1 type: nmos
+INFO:root:Net gnda is part of higher level subckt
+INFO:root:Net ena is part of higher level subckt
+INFO:root:Net ena_ internal to subckt
+INFO:root:Net vdda is part of higher level subckt
+INFO:root:flattening the circuit inverter_B
+INFO:root:Net out is part of higher level subckt
+INFO:root:Net in is part of higher level subckt
+INFO:root:Net vdd is part of higher level subckt
+DEBUG:root:Node name xi29|xi3|inverter_B_m0 type: pmos
+INFO:root:Net out is part of higher level subckt
+INFO:root:Net in is part of higher level subckt
+INFO:root:Net gnd is part of higher level subckt
+DEBUG:root:Node name xi29|xi3|inverter_B_m1 type: nmos
+INFO:root:Total no of nodes in design inverter_B= 2
+INFO:root:Net v2 is part of higher level subckt
+INFO:root:Net ena_ internal to subckt
+INFO:root:Net v1 is part of higher level subckt
+DEBUG:root:Node name xi29|switch_A_m15 type: pmos
+INFO:root:Total no of nodes in design switch_A= 4
+INFO:root:Net clk2 internal to subckt
+INFO:root:Net gnd internal to subckt
+INFO:root:Net voutp internal to subckt
+INFO:root:Net net023 internal to subckt
+INFO:root:Net vdd existing in top level
+INFO:root:flattening the circuit switch_A
+INFO:root:Net v1 is part of higher level subckt
+INFO:root:Net ena is part of higher level subckt
+INFO:root:Net v2 is part of higher level subckt
+DEBUG:root:Node name xi26|switch_A_m1 type: nmos
+INFO:root:Net gnda is part of higher level subckt
+INFO:root:Net ena is part of higher level subckt
+INFO:root:Net ena_ internal to subckt
+INFO:root:Net vdda is part of higher level subckt
+INFO:root:flattening the circuit inverter_B
+INFO:root:Net out is part of higher level subckt
+INFO:root:Net in is part of higher level subckt
+INFO:root:Net vdd is part of higher level subckt
+DEBUG:root:Node name xi26|xi3|inverter_B_m0 type: pmos
+INFO:root:Net out is part of higher level subckt
+INFO:root:Net in is part of higher level subckt
+INFO:root:Net gnd is part of higher level subckt
+DEBUG:root:Node name xi26|xi3|inverter_B_m1 type: nmos
+INFO:root:Total no of nodes in design inverter_B= 2
+INFO:root:Net v2 is part of higher level subckt
+INFO:root:Net ena_ internal to subckt
+INFO:root:Net v1 is part of higher level subckt
+DEBUG:root:Node name xi26|switch_A_m15 type: pmos
+INFO:root:Total no of nodes in design switch_A= 4
+INFO:root:Net clk2 internal to subckt
+INFO:root:Net gnd internal to subckt
+INFO:root:Net net026 internal to subckt
+INFO:root:Net vcm internal to subckt
+INFO:root:Net vdd existing in top level
+INFO:root:flattening the circuit switch_A
+INFO:root:Net v1 is part of higher level subckt
+INFO:root:Net ena is part of higher level subckt
+INFO:root:Net v2 is part of higher level subckt
+DEBUG:root:Node name xi28|switch_A_m1 type: nmos
+INFO:root:Net gnda is part of higher level subckt
+INFO:root:Net ena is part of higher level subckt
+INFO:root:Net ena_ internal to subckt
+INFO:root:Net vdda is part of higher level subckt
+INFO:root:flattening the circuit inverter_B
+INFO:root:Net out is part of higher level subckt
+INFO:root:Net in is part of higher level subckt
+INFO:root:Net vdd is part of higher level subckt
+DEBUG:root:Node name xi28|xi3|inverter_B_m0 type: pmos
+INFO:root:Net out is part of higher level subckt
+INFO:root:Net in is part of higher level subckt
+INFO:root:Net gnd is part of higher level subckt
+DEBUG:root:Node name xi28|xi3|inverter_B_m1 type: nmos
+INFO:root:Total no of nodes in design inverter_B= 2
+INFO:root:Net v2 is part of higher level subckt
+INFO:root:Net ena_ internal to subckt
+INFO:root:Net v1 is part of higher level subckt
+DEBUG:root:Node name xi28|switch_A_m15 type: pmos
+INFO:root:Total no of nodes in design switch_A= 4
+INFO:root:Net clk2 internal to subckt
+INFO:root:Net gnd internal to subckt
+INFO:root:Net voutn internal to subckt
+INFO:root:Net net028 internal to subckt
+INFO:root:Net vdd existing in top level
+INFO:root:flattening the circuit switch_A
+INFO:root:Net v1 is part of higher level subckt
+INFO:root:Net ena is part of higher level subckt
+INFO:root:Net v2 is part of higher level subckt
+DEBUG:root:Node name xi31|switch_A_m1 type: nmos
+INFO:root:Net gnda is part of higher level subckt
+INFO:root:Net ena is part of higher level subckt
+INFO:root:Net ena_ internal to subckt
+INFO:root:Net vdda is part of higher level subckt
+INFO:root:flattening the circuit inverter_B
+INFO:root:Net out is part of higher level subckt
+INFO:root:Net in is part of higher level subckt
+INFO:root:Net vdd is part of higher level subckt
+DEBUG:root:Node name xi31|xi3|inverter_B_m0 type: pmos
+INFO:root:Net out is part of higher level subckt
+INFO:root:Net in is part of higher level subckt
+INFO:root:Net gnd is part of higher level subckt
+DEBUG:root:Node name xi31|xi3|inverter_B_m1 type: nmos
+INFO:root:Total no of nodes in design inverter_B= 2
+INFO:root:Net v2 is part of higher level subckt
+INFO:root:Net ena_ internal to subckt
+INFO:root:Net v1 is part of higher level subckt
+DEBUG:root:Node name xi31|switch_A_m15 type: pmos
+INFO:root:Total no of nodes in design switch_A= 4
+INFO:root:Net clk1 internal to subckt
+INFO:root:Net gnd internal to subckt
+INFO:root:Net net023 internal to subckt
+INFO:root:Net vcm internal to subckt
+INFO:root:Net vdd existing in top level
+INFO:root:flattening the circuit switch_A
+INFO:root:Net v1 is part of higher level subckt
+INFO:root:Net ena is part of higher level subckt
+INFO:root:Net v2 is part of higher level subckt
+DEBUG:root:Node name xi25|switch_A_m1 type: nmos
+INFO:root:Net gnda is part of higher level subckt
+INFO:root:Net ena is part of higher level subckt
+INFO:root:Net ena_ internal to subckt
+INFO:root:Net vdda is part of higher level subckt
+INFO:root:flattening the circuit inverter_B
+INFO:root:Net out is part of higher level subckt
+INFO:root:Net in is part of higher level subckt
+INFO:root:Net vdd is part of higher level subckt
+DEBUG:root:Node name xi25|xi3|inverter_B_m0 type: pmos
+INFO:root:Net out is part of higher level subckt
+INFO:root:Net in is part of higher level subckt
+INFO:root:Net gnd is part of higher level subckt
+DEBUG:root:Node name xi25|xi3|inverter_B_m1 type: nmos
+INFO:root:Total no of nodes in design inverter_B= 2
+INFO:root:Net v2 is part of higher level subckt
+INFO:root:Net ena_ internal to subckt
+INFO:root:Net v1 is part of higher level subckt
+DEBUG:root:Node name xi25|switch_A_m15 type: pmos
+INFO:root:Total no of nodes in design switch_A= 4
+INFO:root:Net clk2 internal to subckt
+INFO:root:Net gnd internal to subckt
+INFO:root:Net net030 internal to subckt
+INFO:root:Net vcm internal to subckt
+INFO:root:Net vdd existing in top level
+INFO:root:flattening the circuit switch_A
+INFO:root:Net v1 is part of higher level subckt
+INFO:root:Net ena is part of higher level subckt
+INFO:root:Net v2 is part of higher level subckt
+DEBUG:root:Node name xi30|switch_A_m1 type: nmos
+INFO:root:Net gnda is part of higher level subckt
+INFO:root:Net ena is part of higher level subckt
+INFO:root:Net ena_ internal to subckt
+INFO:root:Net vdda is part of higher level subckt
+INFO:root:flattening the circuit inverter_B
+INFO:root:Net out is part of higher level subckt
+INFO:root:Net in is part of higher level subckt
+INFO:root:Net vdd is part of higher level subckt
+DEBUG:root:Node name xi30|xi3|inverter_B_m0 type: pmos
+INFO:root:Net out is part of higher level subckt
+INFO:root:Net in is part of higher level subckt
+INFO:root:Net gnd is part of higher level subckt
+DEBUG:root:Node name xi30|xi3|inverter_B_m1 type: nmos
+INFO:root:Total no of nodes in design inverter_B= 2
+INFO:root:Net v2 is part of higher level subckt
+INFO:root:Net ena_ internal to subckt
+INFO:root:Net v1 is part of higher level subckt
+DEBUG:root:Node name xi30|switch_A_m15 type: pmos
+INFO:root:Total no of nodes in design switch_A= 4
+INFO:root:Net vo2 internal to subckt
+INFO:root:Net net028 internal to subckt
+DEBUG:root:Node name full_differential_c8 type: cap
+INFO:root:Net vo1 internal to subckt
+INFO:root:Net net030 internal to subckt
+DEBUG:root:Node name full_differential_c6 type: cap
+INFO:root:Net vo1 internal to subckt
+INFO:root:Net net026 internal to subckt
+DEBUG:root:Node name full_differential_c1 type: cap
+INFO:root:Net vo2 internal to subckt
+INFO:root:Net net023 internal to subckt
+DEBUG:root:Node name full_differential_c0 type: cap
+INFO:root:Total no of nodes in design full_differential= 65
+INFO:root:Creating bipartitie graph with Total no of devices 65
+DEBUG:matplotlib:matplotlib data path: /home/yangzhe/.venv/lib/python3.12/site-packages/matplotlib/mpl-data
+DEBUG:matplotlib:CONFIGDIR=/home/yangzhe/.config/matplotlib
+DEBUG:matplotlib:interactive is False
+DEBUG:matplotlib:platform is linux
+DEBUG:matplotlib:CACHEDIR=/home/yangzhe/.cache/matplotlib
+DEBUG:matplotlib.font_manager:Using fontManager instance from /home/yangzhe/.cache/matplotlib/fontlist-v390.json
+INFO:root:creating an instance of spiceParser
+INFO:root:started reading subckt: .subckt rpposab_pcell_0 minus plus
+
+INFO:root:FOUND resistor
+DEBUG:root:resistance:r2 n2 minus rpposab m=1 l=segl w=segw
+
+INFO:root:FOUND resistor
+DEBUG:root:resistance:r1 n1 n2 rpposab m=1 l=segl w=segw
+
+INFO:root:FOUND resistor
+DEBUG:root:resistance:r0 plus n1 rpposab m=1 l=segl w=segw
+
+INFO:root:Finished reading subckt rpposab_pcell_0
+INFO:root:FOUND transistor
+INFO:root:FOUND transistor
+INFO:root:FOUND transistor
+INFO:root:FOUND subckt instance: segw=2e-6
+INFO:root:FOUND cap
+INFO:root:FOUND transistor
+INFO:root:FOUND transistor
+INFO:root:FOUND transistor
+INFO:root:FOUND transistor
+INFO:root:FOUND transistor
+INFO:root:NO subckt defined, checking for any instance at top
+INFO:root:Instances found at top, creating a dummy __top__ subckt
+INFO:root:List of subckts in design rpposab_pcell_0 twoStageMiller
+INFO:root:flattening the circuit twoStageMiller
+INFO:root:Net vout internal to subckt
+INFO:root:Net net0239 internal to subckt
+INFO:root:Net gnda internal to subckt
+DEBUG:root:Node name twoStageMiller_mnm48 type: nmos
+INFO:root:Net net0239 internal to subckt
+INFO:root:Net vbn internal to subckt
+INFO:root:Net gnda internal to subckt
+DEBUG:root:Node name twoStageMiller_mnm7 type: nmos
+INFO:root:Net vbn internal to subckt
+INFO:root:Net vbn internal to subckt
+INFO:root:Net gnda internal to subckt
+DEBUG:root:Node name twoStageMiller_mnm6 type: nmos
+INFO:root:Net net0239 internal to subckt
+INFO:root:Net net087 internal to subckt
+INFO:root:Net rpposab_pcell_0 internal to subckt
+INFO:root:Net m=1 internal to subckt
+INFO:root:Net segl=10e-6 internal to subckt
+DEBUG:root:Node name twoStageMiller_xr1 type: segw=2e-6
+INFO:root:Net net087 internal to subckt
+INFO:root:Net vout internal to subckt
+DEBUG:root:Node name twoStageMiller_c0 type: cap
+INFO:root:Net as_ibpd_1u internal to subckt
+INFO:root:Net as_ibpd_1u internal to subckt
+INFO:root:Net vdda internal to subckt
+DEBUG:root:Node name twoStageMiller_mpm3 type: pmos
+INFO:root:Net nwell_diff internal to subckt
+INFO:root:Net as_ibpd_1u internal to subckt
+INFO:root:Net vdda internal to subckt
+DEBUG:root:Node name twoStageMiller_mpm4 type: pmos
+INFO:root:Net net0239 internal to subckt
+INFO:root:Net vinp internal to subckt
+INFO:root:Net nwell_diff internal to subckt
+DEBUG:root:Node name twoStageMiller_mpm1 type: pmos
+INFO:root:Net vout internal to subckt
+INFO:root:Net as_ibpd_1u internal to subckt
+INFO:root:Net vdda internal to subckt
+DEBUG:root:Node name twoStageMiller_mpm5 type: pmos
+INFO:root:Net vbn internal to subckt
+INFO:root:Net vinn internal to subckt
+INFO:root:Net nwell_diff internal to subckt
+DEBUG:root:Node name twoStageMiller_mpm0 type: pmos
+INFO:root:Total no of nodes in design twoStageMiller= 10
+INFO:root:Creating bipartitie graph with Total no of devices 10

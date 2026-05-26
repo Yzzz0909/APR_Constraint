@@ -1,0 +1,6 @@
+DEBUG:matplotlib:matplotlib data path: /home/yangzhe/.venv/lib/python3.12/site-packages/matplotlib/mpl-data
+DEBUG:matplotlib:CONFIGDIR=/home/yangzhe/.config/matplotlib
+DEBUG:matplotlib:interactive is False
+DEBUG:matplotlib:platform is linux
+DEBUG:matplotlib:CACHEDIR=/home/yangzhe/.cache/matplotlib
+DEBUG:matplotlib.font_manager:Using fontManager instance from /home/yangzhe/.cache/matplotlib/fontlist-v390.json

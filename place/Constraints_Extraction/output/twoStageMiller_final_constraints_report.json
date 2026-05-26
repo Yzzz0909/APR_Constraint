@@ -1,0 +1,170 @@
+{
+  "status": "need_review",
+  "risks": [
+    "unconstrained_top_level_devices"
+  ],
+  "total_top_level": 10,
+  "constrained": 9,
+  "unconstrained": 1,
+  "coverage_ratio": 0.9,
+  "type_summary": {
+    "instance_or_passive": {
+      "total": 2,
+      "unconstrained": 0,
+      "missing": []
+    },
+    "nmos": {
+      "total": 3,
+      "unconstrained": 0,
+      "missing": []
+    },
+    "pmos": {
+      "total": 5,
+      "unconstrained": 1,
+      "missing": [
+        "mpm0"
+      ]
+    }
+  },
+  "pair_candidates": [],
+  "constraint_line_count": 11,
+  "constraint_validation": {
+    "errors": [],
+    "warnings": [],
+    "groups": [
+      {
+        "group": "Group_1",
+        "rule": "11",
+        "members": [
+          "c0",
+          "1"
+        ],
+        "covers": [
+          "c0"
+        ],
+        "referenced_groups": [],
+        "evidence": [
+          "rotation_directive"
+        ],
+        "pairs": [],
+        "issues": []
+      },
+      {
+        "group": "Group_2",
+        "rule": "8",
+        "members": [
+          "mnm6",
+          "mnm7"
+        ],
+        "covers": [
+          "mnm6",
+          "mnm7"
+        ],
+        "referenced_groups": [],
+        "evidence": [],
+        "pairs": [],
+        "issues": []
+      },
+      {
+        "group": "Group_3",
+        "rule": "8",
+        "members": [
+          "mpm3",
+          "mpm4",
+          "mpm5"
+        ],
+        "covers": [
+          "mpm3",
+          "mpm4",
+          "mpm5"
+        ],
+        "referenced_groups": [],
+        "evidence": [],
+        "pairs": [],
+        "issues": []
+      },
+      {
+        "group": "Group_4",
+        "rule": "3",
+        "members": [
+          "mnm48",
+          "xr1",
+          "mpm1"
+        ],
+        "covers": [
+          "mnm48",
+          "mpm1",
+          "xr1"
+        ],
+        "referenced_groups": [],
+        "evidence": [
+          "explicit_pair_lines"
+        ],
+        "pairs": [
+          {
+            "left": "mnm48",
+            "right": "xr1",
+            "evidence": []
+          },
+          {
+            "left": "xr1",
+            "right": "mpm1",
+            "evidence": []
+          }
+        ],
+        "issues": []
+      },
+      {
+        "group": "Group_5",
+        "rule": "3",
+        "members": [
+          "Group_1",
+          "Group_2",
+          "Group_3",
+          "Group_4"
+        ],
+        "covers": [],
+        "referenced_groups": [
+          "Group_1",
+          "Group_2",
+          "Group_3",
+          "Group_4"
+        ],
+        "evidence": [
+          "explicit_pair_lines"
+        ],
+        "pairs": [
+          {
+            "left": "Group_1",
+            "right": "Group_1",
+            "evidence": [
+              "self_pair"
+            ]
+          },
+          {
+            "left": "Group_2",
+            "right": "Group_2",
+            "evidence": [
+              "self_pair"
+            ]
+          },
+          {
+            "left": "Group_3",
+            "right": "Group_3",
+            "evidence": [
+              "self_pair"
+            ]
+          },
+          {
+            "left": "Group_4",
+            "right": "Group_4",
+            "evidence": [
+              "self_pair"
+            ]
+          }
+        ],
+        "issues": []
+      }
+    ]
+  }
+}
