@@ -16,9 +16,12 @@
 ## 目录结构
 
 ```text
-work/place/
+work/
 ├── .venv/
-├── Constraints_Extraction/
+├── Makefile
+├── requirements.txt
+└── place/
+    ├── Constraints_Extraction/
 │   ├── spice_annotation.py
 │   ├── spice_parse2graph.py
 │   ├── Tools.py
@@ -33,8 +36,8 @@ work/place/
 │       ├── circuit_data/
 │       ├── query_graph/
 │       └── primitive_constraint_map/
-└── SubgraphMatching-master/
-    └── build/matching/SubgraphMatching.out
+    └── SubgraphMatching-master/
+        └── build/matching/SubgraphMatching.out
 ```
 
 | 路径 | 说明 |
@@ -54,10 +57,11 @@ work/place/
 ### 1. 激活 Python 环境
 
 ```bash
-source .venv/bin/activate
+cd work
+make shell
 ```
 
-激活成功后，命令行前缀应出现 `(.venv)`。
+进入后会自动切到 `work/place` 并激活 `.venv`。
 
 ### 2. 编译 C++ 图匹配引擎
 
@@ -78,6 +82,31 @@ work/place/SubgraphMatching-master/build/matching/SubgraphMatching.out
 ```
 
 > Windows 本地环境通常不能直接运行服务器编译得到的 `.out` 文件。如果出现 `WinError 193`，一般是执行环境问题，不代表 Python 主流程错误。
+
+### 3. 一键构建
+
+在 `work/` 目录下可以直接使用 `make` 完成常用环境准备：
+
+```bash
+cd work
+make build all
+```
+
+可选命令：
+
+```bash
+make build SubgraphMatching-master
+make build Constraints_Extraction
+```
+
+说明：
+
+- `make build SubgraphMatching-master` 仅编译 C++ 图匹配引擎。
+- `make build Constraints_Extraction` 仅准备 Python 虚拟环境并安装依赖。
+- `make build all` 会同时执行两者。
+- 默认会尝试在 `work/.venv/` 下创建 Python 环境。
+- 进入虚拟环境推荐使用 `make shell`。
+- Python 依赖由 `work/requirements.txt` 管理。
 
 ## 使用方法
 
@@ -122,6 +151,12 @@ Constraints_Extraction/circuit.json
 ```bash
 cd work/place/Constraints_Extraction
 python spice_annotation.py circuit.json
+```
+
+本地测试配置：
+
+```bash
+python spice_annotation.py circuit_local_test.json
 ```
 
 ## 工作流程
@@ -354,6 +389,7 @@ chmod +x ../SubgraphMatching-master/build/matching/SubgraphMatching.out
 确认已经激活虚拟环境：
 
 ```bash
+cd work
 source .venv/bin/activate
 ```
 
@@ -368,4 +404,3 @@ source .venv/bin/activate
 ### `real` 与 `ideal` 不完全一致
 
 不一定是错误。`ideal` 只是正确参考之一。只要底层约束语义正确、report 为 `pass`、validation 无错误和警告，就可以认为输出可用。
-

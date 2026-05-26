@@ -10,7 +10,7 @@ PIP := $(VENV_DIR)/bin/pip
 
 BUILD_ARGS := $(filter-out build,$(MAKECMDGOALS))
 
-.PHONY: build all SubgraphMatching-master Constraints_Extraction build-all build-python build-cpp clean
+.PHONY: build all SubgraphMatching-master Constraints_Extraction build-all build-python build-cpp shell clean
 
 build:
 ifeq ($(BUILD_ARGS),)
@@ -44,7 +44,10 @@ build-python:
 	@$(PYTHON) -m pip install --upgrade pip
 	@$(PIP) install -r "$(ROOT_DIR)/requirements.txt"
 	@echo "Python venv ready: $(VENV_DIR)"
-	@echo "Activate with: source .venv/bin/activate"
+	@echo "Enter it with: make shell"
+
+shell:
+	@bash -lc 'source "$(VENV_DIR)/bin/activate" && cd "$(PLACE_DIR)" && exec bash'
 
 clean:
 	@echo "No default clean action. Remove .venv or place/SubgraphMatching-master/build manually if needed."
