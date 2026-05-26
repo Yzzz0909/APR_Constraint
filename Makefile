@@ -10,7 +10,7 @@ PIP := $(VENV_DIR)/bin/pip
 
 BUILD_ARGS := $(filter-out build,$(MAKECMDGOALS))
 
-.PHONY: build all SubgraphMatching-master Constraints_Extraction build-all build-python build-cpp shell clean
+.PHONY: build all SubgraphMatching-master Constraints_Extraction build-all build-python build-cpp shell setup clean
 
 build:
 ifeq ($(BUILD_ARGS),)
@@ -20,6 +20,8 @@ else
 endif
 
 all: build-all
+
+setup: build-all shell
 
 SubgraphMatching-master: build-cpp
 
