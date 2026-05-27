@@ -1,0 +1,38 @@
+[BootstrapCap_rotate_target] valid_matches=8
+  match1: {'0': 'c8'}
+  match2: {'0': 'c8'}
+  match3: {'0': 'c6'}
+  match4: {'0': 'c6'}
+  match5: {'0': 'c1'}
+  match6: {'0': 'c1'}
+  match7: {'0': 'c0'}
+  match8: {'0': 'c0'}
+[Load_target] valid_matches=6
+  match1: {'0': 'm6', '4': 'm4'}
+  match2: {'0': 'm6', '4': 'm0'}
+  match3: {'0': 'm4', '4': 'm6'}
+  match4: {'0': 'm4', '4': 'm0'}
+  match5: {'0': 'm0', '4': 'm6'}
+  match6: {'0': 'm0', '4': 'm4'}
+[Load_pmos_target] valid_matches=4
+  match1: {'0': 'm15', '4': 'm14'}
+  match2: {'0': 'm14', '4': 'm15'}
+  match3: {'0': 'm10', '4': 'm7'}
+  match4: {'0': 'm7', '4': 'm10'}
+[DifferentialPair_target] valid_matches=2
+  match1: {'0': 'm2', '4': 'm1'}
+  match2: {'0': 'm1', '4': 'm2'}
+[switch_A] component=['xi25', 'xi26', 'xi27', 'xi28', 'xi29', 'xi30', 'xi31', 'xi32']
+[switch_A] component=['xi21', 'xi22', 'xi23', 'xi40']
+[expand_group] Group_7 add_pairs=[['m8', 'm9']]
+[expand_group] Group_6 add_pairs=[['m3', 'm5']]
+[coverage_audit]
+  status=pass
+  risks=[]
+  total_top_level=17
+  constrained=17
+  unconstrained=0
+  coverage_ratio=100.00%
+  type=instance_or_passive total=4 unconstrained=0
+  type=nmos total=7 unconstrained=0
+  type=pmos total=6 unconstrained=0

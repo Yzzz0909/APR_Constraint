@@ -1,0 +1,207 @@
+{
+  "status": "pass",
+  "risks": [],
+  "total_top_level": 11,
+  "constrained": 11,
+  "unconstrained": 0,
+  "coverage_ratio": 1.0,
+  "type_summary": {
+    "nmos": {
+      "total": 5,
+      "unconstrained": 0,
+      "missing": []
+    },
+    "pmos": {
+      "total": 6,
+      "unconstrained": 0,
+      "missing": []
+    }
+  },
+  "pair_candidates": [],
+  "constraint_line_count": 14,
+  "constraint_validation": {
+    "errors": [],
+    "warnings": [],
+    "groups": [
+      {
+        "group": "Group_4",
+        "rule": "7",
+        "members": [
+          "xi1"
+        ],
+        "covers": [
+          "xi1"
+        ],
+        "referenced_groups": [],
+        "evidence": [
+          "single_device_or_instance_protection"
+        ],
+        "pairs": [],
+        "issues": []
+      },
+      {
+        "group": "Group_5",
+        "rule": "7",
+        "members": [
+          "m5"
+        ],
+        "covers": [
+          "m5"
+        ],
+        "referenced_groups": [],
+        "evidence": [
+          "single_device_or_instance_protection"
+        ],
+        "pairs": [],
+        "issues": []
+      },
+      {
+        "group": "Group_6",
+        "rule": "3",
+        "members": [
+          "m0",
+          "m1",
+          "m9",
+          "m4",
+          "m10",
+          "m8"
+        ],
+        "covers": [
+          "m0",
+          "m1",
+          "m10",
+          "m4",
+          "m8",
+          "m9"
+        ],
+        "referenced_groups": [],
+        "evidence": [
+          "explicit_pair_lines"
+        ],
+        "pairs": [
+          {
+            "left": "m0",
+            "right": "m1",
+            "evidence": [
+              "same_type:pmos",
+              "shared_source",
+              "matched_supply_branches",
+              "cross_coupled"
+            ]
+          },
+          {
+            "left": "m9",
+            "right": "m4",
+            "evidence": [
+              "same_type:pmos",
+              "shared_gate",
+              "shared_source",
+              "matched_supply_branches"
+            ]
+          },
+          {
+            "left": "m10",
+            "right": "m8",
+            "evidence": [
+              "same_type:pmos",
+              "shared_gate",
+              "shared_source",
+              "matched_supply_branches"
+            ]
+          }
+        ],
+        "issues": []
+      },
+      {
+        "group": "Group_7",
+        "rule": "3",
+        "members": [
+          "m6",
+          "m7",
+          "m2",
+          "m3"
+        ],
+        "covers": [
+          "m2",
+          "m3",
+          "m6",
+          "m7"
+        ],
+        "referenced_groups": [],
+        "evidence": [
+          "explicit_pair_lines"
+        ],
+        "pairs": [
+          {
+            "left": "m6",
+            "right": "m7",
+            "evidence": [
+              "same_type:nmos",
+              "shared_source"
+            ]
+          },
+          {
+            "left": "m2",
+            "right": "m3",
+            "evidence": [
+              "same_type:nmos",
+              "cross_coupled"
+            ]
+          }
+        ],
+        "issues": []
+      },
+      {
+        "group": "Group_8",
+        "rule": "3",
+        "members": [
+          "Group_4",
+          "Group_5",
+          "Group_6",
+          "Group_7"
+        ],
+        "covers": [],
+        "referenced_groups": [
+          "Group_4",
+          "Group_5",
+          "Group_6",
+          "Group_7"
+        ],
+        "evidence": [
+          "explicit_pair_lines"
+        ],
+        "pairs": [
+          {
+            "left": "Group_4",
+            "right": "Group_4",
+            "evidence": [
+              "self_pair"
+            ]
+          },
+          {
+            "left": "Group_5",
+            "right": "Group_5",
+            "evidence": [
+              "self_pair"
+            ]
+          },
+          {
+            "left": "Group_6",
+            "right": "Group_6",
+            "evidence": [
+              "self_pair"
+            ]
+          },
+          {
+            "left": "Group_7",
+            "right": "Group_7",
+            "evidence": [
+              "self_pair"
+            ]
+          }
+        ],
+        "issues": []
+      }
+    ]
+  }
+}

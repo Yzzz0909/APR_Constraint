@@ -1,7 +1,7 @@
 {
     "root_dir": "./",
     "spice_path": "/home/yangzhe/work/place/Constraints_Extraction/Constraints_Extraction_data/circuit_data/",
-    "netlist": "twoStageMiller.sp",
+    "netlist": "full_differential.sp",
     "out_dir": "/home/yangzhe/work/place/Constraints_Extraction/output/",
     "data_type": "",
     "file_name": "data_graph",

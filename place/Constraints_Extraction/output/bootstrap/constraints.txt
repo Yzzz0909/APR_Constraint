@@ -1,0 +1,10 @@
+Group_1 11 c0 1
+Group_2 3 m21 m22
+2 m21 m21
+2 m22 m22
+Group_3 6 m11 m19 m18 m1 m17
+Group_4 6 m0 m12 m20 m10 m8
+Group_5 6 Group_4 Group_3 Group_2
+Group_6 3 Group_1 Group_5
+2 Group_1 Group_1
+2 Group_5 Group_5

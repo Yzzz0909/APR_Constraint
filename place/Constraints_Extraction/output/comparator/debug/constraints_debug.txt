@@ -1,0 +1,30 @@
+[CrossCoupledPair_pmos_target] valid_matches=2
+  match1: {'0': 'm1', '4': 'm0'}
+  match2: {'0': 'm0', '4': 'm1'}
+[Load_pmos_target] valid_matches=12
+  match1: {'0': 'm10', '4': 'm9'}
+  match2: {'0': 'm10', '4': 'm8'}
+  match3: {'0': 'm10', '4': 'm4'}
+  match4: {'0': 'm9', '4': 'm10'}
+  match5: {'0': 'm9', '4': 'm8'}
+  match6: {'0': 'm9', '4': 'm4'}
+  match7: {'0': 'm8', '4': 'm10'}
+  match8: {'0': 'm8', '4': 'm9'}
+  match9: {'0': 'm8', '4': 'm4'}
+  match10: {'0': 'm4', '4': 'm10'}
+  match11: {'0': 'm4', '4': 'm9'}
+  match12: {'0': 'm4', '4': 'm8'}
+[DifferentialPair_target] valid_matches=2
+  match1: {'0': 'm6', '4': 'm7'}
+  match2: {'0': 'm7', '4': 'm6'}
+[singleton_instance]  -> xi1
+[latched_comparator] pmos=['m0', 'm1', 'm9', 'm4', 'm10', 'm8'] nmos=['m6', 'm7', 'm2', 'm3'] pmos_group=Group_6 nmos_group=Group_7 top=Group_8
+[coverage_audit]
+  status=pass
+  risks=[]
+  total_top_level=11
+  constrained=11
+  unconstrained=0
+  coverage_ratio=100.00%
+  type=nmos total=5 unconstrained=0
+  type=pmos total=6 unconstrained=0

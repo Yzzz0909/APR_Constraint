@@ -1,0 +1,29 @@
+[BootstrapCap_rotate_target] valid_matches=2
+  match1: {'0': 'c0'}
+  match2: {'0': 'c0'}
+[BootstrapPair_nmos_target] valid_matches=1
+  match1: {'0': 'm21', '1': 'm22', '2': 'm19', '3': 'm11'}
+[BootstrapRow_nmos_target] valid_matches=1
+  match1: {'0': 'm11', '1': 'm19', '2': 'm18', '3': 'm1', '4': 'm17'}
+[BootstrapRow_pmos_target] valid_matches=1
+  match1: {'0': 'm0', '1': 'm12', '2': 'm20', '3': 'm10', '4': 'm8'}
+[Load_target] valid_matches=2
+  match1: {'0': 'm18', '4': 'm11'}
+  match2: {'0': 'm11', '4': 'm18'}
+[Load_pmos_target] valid_matches=2
+  match1: {'0': 'm0', '4': 'm10'}
+  match2: {'0': 'm10', '4': 'm0'}
+[DifferentialPair_target] valid_matches=2
+  match1: {'0': 'm22', '4': 'm19'}
+  match2: {'0': 'm19', '4': 'm22'}
+[structured_hierarchy] rotation=Group_1 lines=['Group_4', 'Group_3'] pair=Group_2 top=Group_6
+[coverage_audit]
+  status=pass
+  risks=[]
+  total_top_level=13
+  constrained=13
+  unconstrained=0
+  coverage_ratio=100.00%
+  type=instance_or_passive total=1 unconstrained=0
+  type=nmos total=7 unconstrained=0
+  type=pmos total=5 unconstrained=0

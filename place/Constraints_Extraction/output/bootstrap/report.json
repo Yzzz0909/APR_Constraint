@@ -1,0 +1,187 @@
+{
+  "status": "pass",
+  "risks": [],
+  "total_top_level": 13,
+  "constrained": 13,
+  "unconstrained": 0,
+  "coverage_ratio": 1.0,
+  "type_summary": {
+    "instance_or_passive": {
+      "total": 1,
+      "unconstrained": 0,
+      "missing": []
+    },
+    "nmos": {
+      "total": 7,
+      "unconstrained": 0,
+      "missing": []
+    },
+    "pmos": {
+      "total": 5,
+      "unconstrained": 0,
+      "missing": []
+    }
+  },
+  "pair_candidates": [],
+  "constraint_line_count": 10,
+  "constraint_validation": {
+    "errors": [],
+    "warnings": [],
+    "groups": [
+      {
+        "group": "Group_1",
+        "rule": "11",
+        "members": [
+          "c0",
+          "1"
+        ],
+        "covers": [
+          "c0"
+        ],
+        "referenced_groups": [],
+        "evidence": [
+          "rotation_directive"
+        ],
+        "pairs": [],
+        "issues": []
+      },
+      {
+        "group": "Group_2",
+        "rule": "3",
+        "members": [
+          "m21",
+          "m22"
+        ],
+        "covers": [
+          "m21",
+          "m22"
+        ],
+        "referenced_groups": [],
+        "evidence": [
+          "explicit_pair_lines"
+        ],
+        "pairs": [
+          {
+            "left": "m21",
+            "right": "m21",
+            "evidence": [
+              "self_pair"
+            ]
+          },
+          {
+            "left": "m22",
+            "right": "m22",
+            "evidence": [
+              "self_pair"
+            ]
+          }
+        ],
+        "issues": []
+      },
+      {
+        "group": "Group_3",
+        "rule": "6",
+        "members": [
+          "m11",
+          "m19",
+          "m18",
+          "m1",
+          "m17"
+        ],
+        "covers": [
+          "m1",
+          "m11",
+          "m17",
+          "m18",
+          "m19"
+        ],
+        "referenced_groups": [],
+        "evidence": [
+          "line_members=5",
+          "member_types=['nmos']"
+        ],
+        "pairs": [],
+        "issues": []
+      },
+      {
+        "group": "Group_4",
+        "rule": "6",
+        "members": [
+          "m0",
+          "m12",
+          "m20",
+          "m10",
+          "m8"
+        ],
+        "covers": [
+          "m0",
+          "m10",
+          "m12",
+          "m20",
+          "m8"
+        ],
+        "referenced_groups": [],
+        "evidence": [
+          "line_members=5",
+          "member_types=['pmos']"
+        ],
+        "pairs": [],
+        "issues": []
+      },
+      {
+        "group": "Group_5",
+        "rule": "6",
+        "members": [
+          "Group_4",
+          "Group_3",
+          "Group_2"
+        ],
+        "covers": [],
+        "referenced_groups": [
+          "Group_4",
+          "Group_3",
+          "Group_2"
+        ],
+        "evidence": [
+          "line_members=3",
+          "member_types=['group_or_passive']"
+        ],
+        "pairs": [],
+        "issues": []
+      },
+      {
+        "group": "Group_6",
+        "rule": "3",
+        "members": [
+          "Group_1",
+          "Group_5"
+        ],
+        "covers": [],
+        "referenced_groups": [
+          "Group_1",
+          "Group_5"
+        ],
+        "evidence": [
+          "explicit_pair_lines"
+        ],
+        "pairs": [
+          {
+            "left": "Group_1",
+            "right": "Group_1",
+            "evidence": [
+              "self_pair"
+            ]
+          },
+          {
+            "left": "Group_5",
+            "right": "Group_5",
+            "evidence": [
+              "self_pair"
+            ]
+          }
+        ],
+        "issues": []
+      }
+    ]
+  }
+}
