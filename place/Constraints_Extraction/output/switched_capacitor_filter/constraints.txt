@@ -1,0 +1,41 @@
+Group_1 11 c9 1
+Group_2 11 c8 1
+Group_3 11 c7 1
+Group_4 11 c6 1
+Group_5 11 c5 1
+Group_6 11 c4 1
+Group_7 11 c3 1
+Group_8 11 c2 1
+Group_9 11 c1 1
+Group_10 11 c0 1
+Group_11 3 m4 m8 m12 m6
+2 m4 m8
+2 m12 m6
+Group_12 1 m0 m3
+Group_13 1 m7 m5
+Group_14 1 m11 m14
+Group_15 1 m9 m10
+Group_16 7 XIOTA
+Group_17 3 Group_1 Group_2 Group_3
+2 Group_1 Group_1
+2 Group_2 Group_2
+2 Group_3 Group_3
+Group_18 3 Group_4 Group_5
+2 Group_4 Group_4
+2 Group_5 Group_5
+Group_19 3 Group_6 Group_7 Group_8 Group_9 Group_10 Group_11 Group_12 Group_13 Group_14 Group_15 Group_16
+2 Group_6 Group_6
+2 Group_7 Group_7
+2 Group_8 Group_8
+2 Group_9 Group_9
+2 Group_10 Group_10
+2 Group_11 Group_11
+2 Group_12 Group_12
+2 Group_13 Group_13
+2 Group_14 Group_14
+2 Group_15 Group_15
+2 Group_16 Group_16
+Group_20 3 Group_17 Group_18 Group_19
+2 Group_17 Group_17
+2 Group_18 Group_18
+2 Group_19 Group_19

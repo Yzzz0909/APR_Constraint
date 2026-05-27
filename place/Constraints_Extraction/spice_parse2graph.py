@@ -341,10 +341,24 @@ class spiceParser2: # for empyrean spice netlist
                 line = line.replace('(', ' ').replace(')', ' ')
 
             hier_nodes = line.strip().split()
-            device = {"inst": hier_nodes[0][0:],
-                      "inst_type": hier_nodes[-1],
-                      "ports": hier_nodes[1:-1],
-                      "edge_weight": list(range(len(hier_nodes[1:-1]))),
+            inst_name = hier_nodes[0]
+            params = [idx for idx, token in enumerate(hier_nodes[1:], 1) if '=' in token]
+            subckt_idx = None
+            for idx in range(1, len(hier_nodes)):
+                token = hier_nodes[idx]
+                if '=' in token:
+                    break
+                if token in self.subckts:
+                    subckt_idx = idx
+                    break
+            if subckt_idx is None:
+                subckt_idx = params[0] if params else len(hier_nodes) - 1
+            subckt_name = hier_nodes[subckt_idx]
+            ports = hier_nodes[1:subckt_idx]
+            device = {"inst": inst_name,
+                      "inst_type": subckt_name,
+                      "ports": ports,
+                      "edge_weight": list(range(len(ports))),
                       "values": None}
             logging.info('FOUND subckt instance: '+device["inst_type"])
         else:

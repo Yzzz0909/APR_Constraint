@@ -1,0 +1,44 @@
+[BootstrapCap_rotate_target] valid_matches=20
+  match1: {'0': 'c9'}
+  match2: {'0': 'c9'}
+  match3: {'0': 'c8'}
+  match4: {'0': 'c8'}
+  match5: {'0': 'c7'}
+  match6: {'0': 'c7'}
+  match7: {'0': 'c6'}
+  match8: {'0': 'c6'}
+  match9: {'0': 'c5'}
+  match10: {'0': 'c5'}
+  match11: {'0': 'c4'}
+  match12: {'0': 'c4'}
+  match13: {'0': 'c3'}
+  match14: {'0': 'c3'}
+  match15: {'0': 'c2'}
+  match16: {'0': 'c2'}
+  match17: {'0': 'c1'}
+  match18: {'0': 'c1'}
+  match19: {'0': 'c0'}
+  match20: {'0': 'c0'}
+[Load_target] valid_matches=2
+  match1: {'0': 'm4', '4': 'm8'}
+  match2: {'0': 'm8', '4': 'm4'}
+[DifferentialPair_target] valid_matches=8
+  match1: {'0': 'm0', '4': 'm3'}
+  match2: {'0': 'm3', '4': 'm0'}
+  match3: {'0': 'm7', '4': 'm5'}
+  match4: {'0': 'm5', '4': 'm7'}
+  match5: {'0': 'm11', '4': 'm14'}
+  match6: {'0': 'm14', '4': 'm11'}
+  match7: {'0': 'm9', '4': 'm10'}
+  match8: {'0': 'm10', '4': 'm9'}
+[singleton_instance] telescopic_ota -> XIOTA
+[expand_group] Group_11 add_pairs=[['m12', 'm6']]
+[coverage_audit]
+  status=pass
+  risks=[]
+  total_top_level=22
+  constrained=22
+  unconstrained=0
+  coverage_ratio=100.00%
+  type=instance_or_passive total=10 unconstrained=0
+  type=nmos total=12 unconstrained=0

@@ -1,19 +1,15 @@
 {
-  "status": "need_review",
-  "risks": [
-    "unconstrained_top_level_devices"
-  ],
-  "total_top_level": 10,
+  "status": "pass",
+  "risks": [],
+  "total_top_level": 9,
   "constrained": 9,
-  "unconstrained": 1,
-  "coverage_ratio": 0.9,
+  "unconstrained": 0,
+  "coverage_ratio": 1.0,
   "type_summary": {
     "instance_or_passive": {
-      "total": 2,
-      "unconstrained": 1,
-      "missing": [
-        "xr1"
-      ]
+      "total": 1,
+      "unconstrained": 0,
+      "missing": []
     },
     "nmos": {
       "total": 3,
@@ -27,7 +23,7 @@
     }
   },
   "pair_candidates": [],
-  "constraint_line_count": 15,
+  "constraint_line_count": 17,
   "constraint_validation": {
     "errors": [],
     "warnings": [],
@@ -70,8 +66,8 @@
         "rule": "8",
         "members": [
           "mpm3",
-          "mpm5",
-          "mpm4"
+          "mpm4",
+          "mpm5"
         ],
         "covers": [
           "mpm3",
@@ -114,6 +110,22 @@
         "group": "Group_5",
         "rule": "7",
         "members": [
+          "xr1"
+        ],
+        "covers": [
+          "xr1"
+        ],
+        "referenced_groups": [],
+        "evidence": [
+          "single_device_or_instance_protection"
+        ],
+        "pairs": [],
+        "issues": []
+      },
+      {
+        "group": "Group_6",
+        "rule": "7",
+        "members": [
           "mnm48"
         ],
         "covers": [
@@ -127,7 +139,7 @@
         "issues": []
       },
       {
-        "group": "Group_6",
+        "group": "Group_7",
         "rule": "3",
         "members": [
           "Group_1",
@@ -169,7 +181,7 @@
         "issues": []
       },
       {
-        "group": "Group_7",
+        "group": "Group_8",
         "rule": "3",
         "members": [
           "Group_4",
@@ -202,31 +214,40 @@
         "issues": []
       },
       {
-        "group": "Group_8",
+        "group": "Group_9",
         "rule": "3",
         "members": [
-          "Group_6",
-          "Group_7"
+          "Group_7",
+          "Group_8",
+          "Group_6"
         ],
         "covers": [],
         "referenced_groups": [
-          "Group_6",
-          "Group_7"
+          "Group_7",
+          "Group_8",
+          "Group_6"
         ],
         "evidence": [
           "explicit_pair_lines"
         ],
         "pairs": [
           {
-            "left": "Group_6",
-            "right": "Group_6",
+            "left": "Group_7",
+            "right": "Group_7",
             "evidence": [
               "self_pair"
             ]
           },
           {
-            "left": "Group_7",
-            "right": "Group_7",
+            "left": "Group_8",
+            "right": "Group_8",
+            "evidence": [
+              "self_pair"
+            ]
+          },
+          {
+            "left": "Group_6",
+            "right": "Group_6",
             "evidence": [
               "self_pair"
             ]

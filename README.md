@@ -11,7 +11,19 @@
 - 调用 `SubgraphMatching.out` 识别差分对、电流镜、负载、交叉耦合对等结构。
 - 根据 `.graph` 模板和 `_map.json` 映射生成版图约束。
 - 使用结构化规则补充比较器、bootstrap、全差分等高层结构约束。
-- 生成 `*_report.json`，用于判断结果是否可直接进入后续布局布线。
+- 生成 `report.json`，用于判断结果是否可直接进入后续布局布线。
+
+## 文档导航
+
+更详细的工程说明拆分在 `doc/` 目录下：
+
+| 文档 | 内容 |
+|---|---|
+| [`doc/README.md`](doc/README.md) | 文档总索引 |
+| [`doc/overview/README.md`](doc/overview/README.md) | 项目目标和架构 |
+| [`doc/workflow/README.md`](doc/workflow/README.md) | 部署、运行、模板编写 |
+| [`doc/reference/README.md`](doc/reference/README.md) | 三分图和格式约定 |
+| [`doc/verification/README.md`](doc/verification/README.md) | report 解读与验证 |
 
 ## 目录结构
 
@@ -22,22 +34,42 @@ work/
 ├── requirements.txt
 └── place/
     ├── Constraints_Extraction/
-│   ├── spice_annotation.py
-│   ├── spice_parse2graph.py
-│   ├── Tools.py
-│   ├── template_generator.py
-│   ├── circuit.json
-│   ├── circuit_local_test.json
-│   ├── output/
-│   │   ├── real/
-│   │   ├── ideal/
-│   │   └── local_test/
-│   └── Constraints_Extraction_data/
-│       ├── circuit_data/
-│       ├── query_graph/
-│       └── primitive_constraint_map/
-    └── SubgraphMatching-master/
-        └── build/matching/SubgraphMatching.out
+    │   ├── spice_annotation.py
+    │   ├── spice_parse2graph.py
+    │   ├── Tools.py
+    │   ├── template_generator.py
+    │   ├── circuit.json
+    │   ├── output/
+    │   │   └── <circuit_name>/
+    │   │       ├── constraints.txt
+    │   │       ├── report.json
+    │   │       └── debug/
+    │   └── Constraints_Extraction_data/
+    │       ├── circuit_data/
+    │       ├── query_graph/
+    │       └── primitive_constraint_map/
+    ├── SubgraphMatching-master/
+    │   └── build/matching/SubgraphMatching.out
+    └── doc/
+        ├── README.md
+        ├── overview/
+        │   ├── README.md
+        │   ├── project-facts.md
+        │   └── architecture.md
+        ├── workflow/
+        │   ├── README.md
+        │   ├── quick-start.md
+        │   ├── commands.md
+        │   └── template-authoring.md
+        ├── reference/
+        │   ├── README.md
+        │   └── tripartite-graph.md
+        ├── verification/
+        │   ├── README.md
+        │   ├── report-guide.md
+        │   └── common-bugs.md
+        └── archive/
+            └── *.pdf
 ```
 
 | 路径 | 说明 |
@@ -49,64 +81,43 @@ work/
 | `Constraints_Extraction_data/circuit_data/` | 待处理网表 |
 | `Constraints_Extraction_data/query_graph/` | 子图匹配模板 |
 | `Constraints_Extraction_data/primitive_constraint_map/` | 模板到约束的映射 |
-| `output/real/` | 当前真实输出 |
-| `output/ideal/` | 正确参考示例 |
+| `Constraints_Extraction/output/<circuit_name>/` | 单个电路的输出项目目录 |
+| `doc/overview/` | 项目目标、架构、工程事实 |
+| `doc/workflow/` | 部署、运行、模板编写 |
+| `doc/reference/` | 三分图和格式约定 |
+| `doc/verification/` | report 解读、常见 bug 与验证 |
 
 ## 环境准备
 
-### 1. 激活 Python 环境
-
-```bash
-cd work
-make shell
-```
-
-进入后会自动切到 `work/place` 并激活 `.venv`。
-
-### 2. 编译 C++ 图匹配引擎
-
-首次运行前需要编译 `SubgraphMatching-master`：
-
-```bash
-cd work/place/SubgraphMatching-master
-mkdir -p build
-cd build
-cmake ..
-make
-```
-
-确认以下文件存在：
-
-```text
-work/place/SubgraphMatching-master/build/matching/SubgraphMatching.out
-```
-
-> Windows 本地环境通常不能直接运行服务器编译得到的 `.out` 文件。如果出现 `WinError 193`，一般是执行环境问题，不代表 Python 主流程错误。
-
-### 3. 一键构建
+### 一键构建
 
 在 `work/` 目录下可以直接使用 `make` 完成常用环境准备：
 
 ```bash
 cd work
-make build all
+make setup
 ```
 
 可选命令：
 
 ```bash
+make build all
 make build SubgraphMatching-master
 make build Constraints_Extraction
+make shell
 ```
 
 说明：
 
+- `make setup` 会构建全部环境并进入已激活 `.venv` 的 shell。
+- `make build all` 只构建全部环境，不进入 shell。
 - `make build SubgraphMatching-master` 仅编译 C++ 图匹配引擎。
 - `make build Constraints_Extraction` 仅准备 Python 虚拟环境并安装依赖。
-- `make build all` 会同时执行两者。
+- `make shell` 进入已有 `.venv`。
 - 默认会尝试在 `work/.venv/` 下创建 Python 环境。
-- 进入虚拟环境推荐使用 `make shell`。
 - Python 依赖由 `work/requirements.txt` 管理。
+
+> Windows 本地环境通常不能直接运行服务器编译得到的 `.out` 文件。如果出现 `WinError 193`，一般是执行环境问题，不代表 Python 主流程错误。
 
 ## 使用方法
 
@@ -149,14 +160,8 @@ Constraints_Extraction/circuit.json
 ### 3. 运行
 
 ```bash
-cd work/place/Constraints_Extraction
-python spice_annotation.py circuit.json
-```
-
-本地测试配置：
-
-```bash
-python spice_annotation.py circuit_local_test.json
+cd work
+make run
 ```
 
 ## 工作流程
@@ -199,15 +204,26 @@ Python 主流程内部调用 C++ 引擎时使用：
 
 ## 输出文件
 
-运行后会在 `output/` 下生成：
+运行后会在 `output/` 下按电路名生成独立项目目录。同名电路再次运行时会覆盖该目录内同名文件：
+
+```text
+output/
+└── <circuit_name>/
+    ├── constraints.txt
+    ├── report.json
+    └── debug/
+        ├── <circuit_name>_target.graph
+        ├── match_*.txt
+        └── constraints_debug.txt
+```
 
 | 文件 | 说明 |
 |---|---|
-| `*_target.graph` | 当前电路的目标三分图 |
-| `match_*.txt` | 模板节点到电路节点的匹配结果 |
-| `*_final_constraints.txt` | 最终版图约束 |
-| `*_final_constraints_debug.txt` | 匹配和规则推断调试信息 |
-| `*_final_constraints_report.json` | 自动审计报告 |
+| `constraints.txt` | 最终版图约束 |
+| `report.json` | 自动审计报告 |
+| `debug/<circuit_name>_target.graph` | 当前电路的目标三分图 |
+| `debug/match_*.txt` | 模板节点到电路节点的匹配结果 |
+| `debug/constraints_debug.txt` | 匹配和规则推断调试信息 |
 
 约束示例：
 
@@ -232,7 +248,7 @@ Group_3 6 m11 m19 m18 m1 m17
 
 ## Report 阅读方法
 
-`*_report.json` 用于判断约束是否可直接进入后续布局布线。
+`report.json` 用于判断约束是否可直接进入后续布局布线。
 
 ### 1. 看 `status` 和 `risks`
 
@@ -312,20 +328,21 @@ Group_3 6 m11 m19 m18 m1 m17
 
 ## 基准测试电路
 
-当前 `output/real/` 中维护三组稳定测试：
+当前建议维护以下稳定测试电路。每个电路运行后会输出到 `output/<circuit_name>/`：
 
 | 电路 | 说明 | 期望状态 |
 |---|---|---|
 | `full_differential` | 全差分结构测试 | `pass` |
 | `comparator` | 锁存比较器结构测试 | `pass` |
 | `bootstrap` | Bootstrap switch 结构测试 | `pass` |
+| `twoStageMiller` | 二级 Miller 运放结构测试 | `pass` |
 
 开发建议：
 
 ```text
 修改模板、map、规则或验证器
   -> 重跑当前问题电路
-  -> 重跑三组基准电路
+  -> 重跑稳定测试电路
   -> 所有 report 保持 pass
 ```
 

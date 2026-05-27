@@ -51,6 +51,7 @@ PRE_TEMPLATE_RULES = (
 
 POST_TEMPLATE_RULES = (
     ("infer_instance_constraints", True),
+    ("infer_uncovered_instance_protection", True),
     ("expand_mos_symmetry_groups", False),
 )
 
@@ -1229,15 +1230,13 @@ class ConstraintExtractor:
                     self._append_symmetry_group(pairs)
 
         # 对只有一个顶层实例、且其内部器件已经被约束覆盖的子电路，
-        # 补一个实例级保护约束。这样 comparator 里像 xi1 这类
-        # “单个锁存单元”可以保留下来，同时不会误报尚未成形的实例。
+        # 补一个实例级保护约束。这里不再限定 xi* 前缀，
+        # 这样像米勒补偿里的 xr1 这类封装实例也能自动保留。
         for stype, insts in type_to_insts.items():
             if len(insts) != 1:
                 continue
             inst_name = insts[0]
             if inst_name in self.constrained_devices:
-                continue
-            if not str(inst_name).lower().startswith('xi'):
                 continue
 
             self.final_layout_lines.append(f"Group_{self.group_id} 7 {inst_name}")
@@ -1373,6 +1372,39 @@ class ConstraintExtractor:
                 self.final_layout_lines.append(f"Group_{self.group_id} 7 {cname}")
                 self.group_id += 1
                 self.constrained_devices.add(cname)
+
+    def infer_uncovered_instance_protection(self, circuit_graph):
+        """
+        对仍未覆盖的顶层子电路实例补保护约束。
+
+        这条规则用于黑盒流程中的通用封装实例，例如二级米勒补偿里的
+        参数化电阻子电路 xr1。它不依赖电路名，只处理非 MOS 的顶层实例，
+        避免因为 parser 展不开或模板库暂未覆盖而导致 report 被单个实例卡住。
+        """
+        def clean_node(name):
+            if '|' in name:
+                return name.split('|')[0]
+            return name.split('_')[-1] if '_' in name else name
+
+        protected = []
+        for n, attr in circuit_graph.nodes(data=True):
+            if '|' in n:
+                continue
+            itype = str(attr.get('inst_type', '')).lower()
+            if itype in ('', 'net', 'nmos', 'pmos', 'transistor', 'cap', 'res', 'inductor'):
+                continue
+            cname = clean_node(n)
+            if cname in self.constrained_devices:
+                continue
+            if cname not in self.toplevel_devices:
+                continue
+            self.final_layout_lines.append(f"Group_{self.group_id} 7 {cname}")
+            self.group_id += 1
+            self.constrained_devices.add(cname)
+            protected.append((cname, itype))
+
+        if protected:
+            self.debug_lines.append(f"[uncovered_instance_protection] protected={protected}")
 
     def audit_constraint_coverage(self, circuit_graph):
         """

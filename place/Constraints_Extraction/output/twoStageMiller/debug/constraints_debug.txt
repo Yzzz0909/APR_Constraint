@@ -12,14 +12,14 @@
 [DifferentialPair_pmos_target] valid_matches=2
   match1: {'0': 'mpm1', '4': 'mpm0'}
   match2: {'0': 'mpm0', '4': 'mpm1'}
+[singleton_instance] rpposab_pcell_0 -> xr1
 [coverage_audit]
-  status=need_review
-  risks=['unconstrained_top_level_devices']
-  total_top_level=10
+  status=pass
+  risks=[]
+  total_top_level=9
   constrained=9
-  unconstrained=1
-  coverage_ratio=90.00%
-  type=instance_or_passive total=2 unconstrained=1
-    missing=['xr1']
+  unconstrained=0
+  coverage_ratio=100.00%
+  type=instance_or_passive total=1 unconstrained=0
   type=nmos total=3 unconstrained=0
   type=pmos total=5 unconstrained=0
