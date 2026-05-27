@@ -24,7 +24,7 @@ all: build-all
 setup: build-all shell
 
 run:
-	@cd "$(PY_DIR)" && "$(PYTHON)" spice_annotation.py circuit.json
+	@"$(PYTHON)" "$(PY_DIR)/spice_annotation.py" "$(PY_DIR)/circuit.json"
 
 SubgraphMatching-master: build-cpp
 

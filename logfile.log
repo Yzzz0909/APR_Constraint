@@ -1,0 +1,180 @@
+DEBUG:matplotlib:matplotlib data path: /home/yangzhe/work/.venv/lib/python3.12/site-packages/matplotlib/mpl-data
+DEBUG:matplotlib:CONFIGDIR=/home/yangzhe/.config/matplotlib
+DEBUG:matplotlib:interactive is False
+DEBUG:matplotlib:platform is linux
+DEBUG:matplotlib:CACHEDIR=/home/yangzhe/.cache/matplotlib
+DEBUG:matplotlib.font_manager:Using fontManager instance from /home/yangzhe/.cache/matplotlib/fontlist-v390.json
+INFO:root:creating an instance of spiceParser
+INFO:root:started reading subckt: .subckt telescopic_ota d1 vinn vinp vbiasn vbiasp1 vbiasp2 voutn voutp
+
+INFO:root:FOUND transistor
+INFO:root:FOUND transistor
+INFO:root:FOUND transistor
+INFO:root:FOUND transistor
+INFO:root:FOUND transistor
+INFO:root:FOUND transistor
+INFO:root:FOUND transistor
+INFO:root:FOUND transistor
+INFO:root:FOUND transistor
+INFO:root:FOUND transistor
+INFO:root:Finished reading subckt telescopic_ota
+INFO:root:started reading subckt: .subckt switched_capacitor_filter voutn voutp vinp vinn ibias
+
+INFO:root:FOUND transistor
+INFO:root:FOUND transistor
+INFO:root:FOUND transistor
+INFO:root:FOUND transistor
+INFO:root:FOUND transistor
+INFO:root:FOUND transistor
+INFO:root:FOUND transistor
+INFO:root:FOUND transistor
+INFO:root:FOUND transistor
+INFO:root:FOUND transistor
+INFO:root:FOUND transistor
+INFO:root:FOUND transistor
+INFO:root:FOUND subckt instance: telescopic_ota
+INFO:root:FOUND cap
+INFO:root:FOUND cap
+INFO:root:FOUND cap
+INFO:root:FOUND cap
+INFO:root:FOUND cap
+INFO:root:FOUND cap
+INFO:root:FOUND cap
+INFO:root:FOUND cap
+INFO:root:FOUND cap
+INFO:root:FOUND cap
+INFO:root:Finished reading subckt switched_capacitor_filter
+INFO:root:NO subckt defined, checking for any instance at top
+INFO:root:No top instances found. Picking filename as top: switched_capacitor_filter
+INFO:root:List of subckts in design telescopic_ota switched_capacitor_filter
+INFO:root:flattening the circuit switched_capacitor_filter
+INFO:root:Net voutn existing in top level
+INFO:root:Net phi1 internal to subckt
+INFO:root:Net net67 internal to subckt
+DEBUG:root:Node name switched_capacitor_filter_m0 type: nmos
+INFO:root:Net net66 internal to subckt
+INFO:root:Net phi1 internal to subckt
+INFO:root:Net net63 internal to subckt
+DEBUG:root:Node name switched_capacitor_filter_m7 type: nmos
+INFO:root:Net net72 internal to subckt
+INFO:root:Net phi1 internal to subckt
+INFO:root:Net vinn existing in top level
+DEBUG:root:Node name switched_capacitor_filter_m6 type: nmos
+INFO:root:Net gnd! internal to subckt
+INFO:root:Net phi2 internal to subckt
+INFO:root:Net net67 internal to subckt
+DEBUG:root:Node name switched_capacitor_filter_m3 type: nmos
+INFO:root:Net gnd! internal to subckt
+INFO:root:Net phi2 internal to subckt
+INFO:root:Net net63 internal to subckt
+DEBUG:root:Node name switched_capacitor_filter_m5 type: nmos
+INFO:root:Net net72 internal to subckt
+INFO:root:Net phi2 internal to subckt
+INFO:root:Net gnd! internal to subckt
+DEBUG:root:Node name switched_capacitor_filter_m4 type: nmos
+INFO:root:Net net60 internal to subckt
+INFO:root:Net phi2 internal to subckt
+INFO:root:Net gnd! internal to subckt
+DEBUG:root:Node name switched_capacitor_filter_m8 type: nmos
+INFO:root:Net gnd! internal to subckt
+INFO:root:Net phi2 internal to subckt
+INFO:root:Net net68 internal to subckt
+DEBUG:root:Node name switched_capacitor_filter_m11 type: nmos
+INFO:root:Net gnd! internal to subckt
+INFO:root:Net phi2 internal to subckt
+INFO:root:Net net62 internal to subckt
+DEBUG:root:Node name switched_capacitor_filter_m9 type: nmos
+INFO:root:Net net64 internal to subckt
+INFO:root:Net phi1 internal to subckt
+INFO:root:Net net62 internal to subckt
+DEBUG:root:Node name switched_capacitor_filter_m10 type: nmos
+INFO:root:Net net60 internal to subckt
+INFO:root:Net phi1 internal to subckt
+INFO:root:Net vinp existing in top level
+DEBUG:root:Node name switched_capacitor_filter_m12 type: nmos
+INFO:root:Net voutp existing in top level
+INFO:root:Net phi1 internal to subckt
+INFO:root:Net net68 internal to subckt
+DEBUG:root:Node name switched_capacitor_filter_m14 type: nmos
+INFO:root:Net ibias existing in top level
+INFO:root:Net net64 internal to subckt
+INFO:root:Net net66 internal to subckt
+INFO:root:Net vbiasn internal to subckt
+INFO:root:Net vbiasp1 internal to subckt
+INFO:root:Net vbiasp2 internal to subckt
+INFO:root:Net voutn existing in top level
+INFO:root:Net voutp existing in top level
+INFO:root:flattening the circuit telescopic_ota
+INFO:root:Net voutn is part of higher level subckt
+INFO:root:Net vbiasn is part of higher level subckt
+INFO:root:Net net8 internal to subckt
+DEBUG:root:Node name XIOTA|telescopic_ota_m9 type: nmos
+INFO:root:Net voutp is part of higher level subckt
+INFO:root:Net vbiasn is part of higher level subckt
+INFO:root:Net net014 internal to subckt
+DEBUG:root:Node name XIOTA|telescopic_ota_m8 type: nmos
+INFO:root:Net d1 is part of higher level subckt
+INFO:root:Net d1 is part of higher level subckt
+INFO:root:Net gnd! internal to subckt
+DEBUG:root:Node name XIOTA|telescopic_ota_m5 type: nmos
+INFO:root:Net net10 internal to subckt
+INFO:root:Net d1 is part of higher level subckt
+INFO:root:Net gnd! internal to subckt
+DEBUG:root:Node name XIOTA|telescopic_ota_m4 type: nmos
+INFO:root:Net net014 internal to subckt
+INFO:root:Net vinn is part of higher level subckt
+INFO:root:Net net10 internal to subckt
+DEBUG:root:Node name XIOTA|telescopic_ota_m3 type: nmos
+INFO:root:Net net8 internal to subckt
+INFO:root:Net vinp is part of higher level subckt
+INFO:root:Net net10 internal to subckt
+DEBUG:root:Node name XIOTA|telescopic_ota_m0 type: nmos
+INFO:root:Net voutp is part of higher level subckt
+INFO:root:Net vbiasp2 is part of higher level subckt
+INFO:root:Net net012 internal to subckt
+DEBUG:root:Node name XIOTA|telescopic_ota_m7 type: pmos
+INFO:root:Net voutn is part of higher level subckt
+INFO:root:Net vbiasp2 is part of higher level subckt
+INFO:root:Net net06 internal to subckt
+DEBUG:root:Node name XIOTA|telescopic_ota_m6 type: pmos
+INFO:root:Net net012 internal to subckt
+INFO:root:Net vbiasp1 is part of higher level subckt
+INFO:root:Net vdd! internal to subckt
+DEBUG:root:Node name XIOTA|telescopic_ota_m2 type: pmos
+INFO:root:Net net06 internal to subckt
+INFO:root:Net vbiasp1 is part of higher level subckt
+INFO:root:Net vdd! internal to subckt
+DEBUG:root:Node name XIOTA|telescopic_ota_m1 type: pmos
+INFO:root:Total no of nodes in design telescopic_ota= 10
+INFO:root:Net voutp existing in top level
+INFO:root:Net gnd! internal to subckt
+DEBUG:root:Node name switched_capacitor_filter_c9 type: cap
+INFO:root:Net voutn existing in top level
+INFO:root:Net gnd! internal to subckt
+DEBUG:root:Node name switched_capacitor_filter_c8 type: cap
+INFO:root:Net net62 internal to subckt
+INFO:root:Net net68 internal to subckt
+DEBUG:root:Node name switched_capacitor_filter_c7 type: cap
+INFO:root:Net net64 internal to subckt
+INFO:root:Net voutp existing in top level
+DEBUG:root:Node name switched_capacitor_filter_c6 type: cap
+INFO:root:Net vinn existing in top level
+INFO:root:Net net64 internal to subckt
+DEBUG:root:Node name switched_capacitor_filter_c5 type: cap
+INFO:root:Net net60 internal to subckt
+INFO:root:Net net62 internal to subckt
+DEBUG:root:Node name switched_capacitor_filter_c4 type: cap
+INFO:root:Net net66 internal to subckt
+INFO:root:Net voutn existing in top level
+DEBUG:root:Node name switched_capacitor_filter_c3 type: cap
+INFO:root:Net vinp existing in top level
+INFO:root:Net net66 internal to subckt
+DEBUG:root:Node name switched_capacitor_filter_c2 type: cap
+INFO:root:Net net63 internal to subckt
+INFO:root:Net net67 internal to subckt
+DEBUG:root:Node name switched_capacitor_filter_c1 type: cap
+INFO:root:Net net72 internal to subckt
+INFO:root:Net net63 internal to subckt
+DEBUG:root:Node name switched_capacitor_filter_c0 type: cap
+INFO:root:Total no of nodes in design switched_capacitor_filter= 32
+INFO:root:Creating bipartitie graph with Total no of devices 32

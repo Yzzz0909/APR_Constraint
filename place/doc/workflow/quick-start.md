@@ -67,11 +67,11 @@ place/Constraints_Extraction/circuit.json
 
 ```json
 {
-  "spice_path": "/home/yangzhe/work/place/Constraints_Extraction/Constraints_Extraction_data/circuit_data/",
+  "spice_path": "./Constraints_Extraction_data/circuit_data/",
   "netlist": "comparator.sp",
-  "out_dir": "/home/yangzhe/work/place/Constraints_Extraction/output/",
-  "subgraphmatchexe": "/home/yangzhe/work/place/SubgraphMatching-master/build/matching/SubgraphMatching.out",
-  "query_path": "/home/yangzhe/work/place/Constraints_Extraction/Constraints_Extraction_data/query_graph/"
+  "out_dir": "./output/",
+  "subgraphmatchexe": "../SubgraphMatching-master/build/matching/SubgraphMatching.out",
+  "query_path": "./Constraints_Extraction_data/query_graph/"
 }
 ```
 

@@ -25,6 +25,12 @@ make shell
 make run
 ```
 
+如果当前不在 `~/work`，也可以从任意路径执行：
+
+```bash
+make -C ~/work run
+```
+
 ## 运行单个电路
 
 编辑 `Constraints_Extraction/circuit.json` 中的 `netlist`，然后执行：
@@ -32,4 +38,3 @@ make run
 ```bash
 make run
 ```
-
