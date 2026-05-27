@@ -72,6 +72,9 @@ class Configuration:
         self.spice_path = self._resolve_dir_path(params.get("spice_path", "./"))
         self.netlist_name = params.get("netlist", "")
         self.out_dir = self._resolve_dir_path(params.get("out_dir", "./output/"))
+        self.circuit_name = self._circuit_name_from_netlist(self.netlist_name)
+        self.project_out_dir = os.path.join(self.out_dir, self.circuit_name)
+        self.debug_out_dir = os.path.join(self.project_out_dir, "debug")
         self.cpp_engine = self._resolve_file_path(params.get("subgraphmatchexe", ""))
         # 自动定位模板目录
         configured_query_path = self._resolve_dir_path(
@@ -95,7 +98,12 @@ class Configuration:
             expected_files=EXPECTED_MAP_FILES,
             label="primitive_constraint_map",
         )
-        if not os.path.exists(self.out_dir): os.makedirs(self.out_dir)
+        os.makedirs(self.debug_out_dir, exist_ok=True)
+
+    def _circuit_name_from_netlist(self, netlist_name):
+        stem = os.path.splitext(os.path.basename(netlist_name))[0]
+        safe = "".join(ch if ch.isalnum() or ch in ("-", "_") else "_" for ch in stem)
+        return safe or "circuit"
 
     def _resolve_path(self, path_value):
         if not path_value:
@@ -175,8 +183,8 @@ class CircuitAnnotator:
         nx_data = json_graph.node_link_data(self.circuit_graph, edges="links") 
         graph_tripartite = graph_convert(nx_data)
         base_name = self.cfg.netlist_name.split('.')[0] + "_target"
-        graphForSubgraphMatchCXX(graph=graph_tripartite, out_path=self.cfg.out_dir + os.sep, name=base_name)
-        self.target_graph_path = os.path.join(self.cfg.out_dir, base_name + ".graph")
+        graphForSubgraphMatchCXX(graph=graph_tripartite, out_path=self.cfg.debug_out_dir + os.sep, name=base_name)
+        self.target_graph_path = os.path.join(self.cfg.debug_out_dir, base_name + ".graph")
         if not os.path.exists(self.target_graph_path):
             raise FileNotFoundError(f"target graph was not generated: {self.target_graph_path}")
         
@@ -185,12 +193,13 @@ class CircuitAnnotator:
         query_files = self._select_query_files()
         print(f"     config: {self.cfg.config_path}")
         print(f"     query_path: {self.cfg.query_path}")
-        print(f"     out_dir: {self.cfg.out_dir}")
+        print(f"     out_dir: {self.cfg.project_out_dir}")
+        print(f"     debug_dir: {self.cfg.debug_out_dir}")
         print(f"     matcher: {self.cfg.cpp_engine}")
 
         for q_file in query_files:
             q_path = os.path.join(self.cfg.query_path, q_file)
-            res_path = os.path.join(self.cfg.out_dir, f"match_{q_file.replace('.graph', '.txt')}")
+            res_path = os.path.join(self.cfg.debug_out_dir, f"match_{q_file.replace('.graph', '.txt')}")
             cmd = [self.cfg.cpp_engine, "-d", self.target_graph_path, "-q", q_path, 
                    "-filter", "GQL", "-order", "GQL", "-engine", "LFTJ", "-num", "MAX", "-result", res_path]
             try:
@@ -224,7 +233,7 @@ class CircuitAnnotator:
 
         # Step 4
         print(f"📝 [Step 4] 提取约束文本...")
-        extractor = ConstraintExtractor(self.circuit_graph, self.cfg.out_dir)
+        extractor = ConstraintExtractor(self.circuit_graph, self.cfg.project_out_dir)
         self._run_primitive_and_structure_rules(extractor)
 
         # Step 5: 推断子电路实例、电容约束及层次嵌套约束
@@ -232,8 +241,10 @@ class CircuitAnnotator:
         self._run_hierarchy_rules(extractor)
         extractor.audit_constraint_coverage(self.circuit_graph)
 
-        final_file = os.path.join(self.cfg.out_dir, f"{self.cfg.netlist_name.split('.')[0]}_final_constraints.txt")
-        extractor.save_to_file(final_file)
+        constraints_file = os.path.join(self.cfg.project_out_dir, "constraints.txt")
+        report_file = os.path.join(self.cfg.project_out_dir, "report.json")
+        debug_file = os.path.join(self.cfg.debug_out_dir, "constraints_debug.txt")
+        extractor.save_to_file(constraints_file, report_path=report_file, debug_path=debug_file)
 
     def _select_query_files(self):
         query_files = [f for f in os.listdir(self.cfg.query_path) if f.endswith('.graph')]
@@ -1667,17 +1678,18 @@ class ConstraintExtractor:
                     devices.add(member)
         return devices
 
-    def save_to_file(self, output_path):
+    def save_to_file(self, output_path, report_path=None, debug_path=None):
         with open(output_path, 'w', encoding='utf-8') as f:
             if self.final_layout_lines:
                 f.write('\n'.join(self.final_layout_lines) + '\n')
         if self.debug_lines:
-            debug_path = output_path.replace('.txt', '_debug.txt')
+            debug_path = debug_path or output_path.replace('.txt', '_debug.txt')
+            os.makedirs(os.path.dirname(debug_path), exist_ok=True)
             with open(debug_path, 'w', encoding='utf-8') as f:
                 f.write('\n'.join(self.debug_lines) + '\n')
-        report_path = None
         if self.coverage_report:
-            report_path = output_path.replace('.txt', '_report.json')
+            report_path = report_path or output_path.replace('.txt', '_report.json')
+            os.makedirs(os.path.dirname(report_path), exist_ok=True)
             with open(report_path, 'w', encoding='utf-8') as f:
                 json.dump(self.coverage_report, f, indent=2, ensure_ascii=False)
         print(f"✅ 成功! 约束文件已保存至: {output_path}")

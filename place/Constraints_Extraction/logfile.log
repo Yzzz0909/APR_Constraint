@@ -34590,3 +34590,231 @@ INFO:root:Net nwell_diff internal to subckt
 DEBUG:root:Node name twoStageMiller_mpm0 type: pmos
 INFO:root:Total no of nodes in design twoStageMiller= 10
 INFO:root:Creating bipartitie graph with Total no of devices 10
+DEBUG:matplotlib:matplotlib data path: /usr/share/matplotlib/mpl-data
+DEBUG:matplotlib:CONFIGDIR=/home/yangzhe/.config/matplotlib
+DEBUG:matplotlib:interactive is False
+DEBUG:matplotlib:platform is linux
+DEBUG:matplotlib:CACHEDIR=/home/yangzhe/.cache/matplotlib
+DEBUG:matplotlib.font_manager:Using fontManager instance from /home/yangzhe/.cache/matplotlib/fontlist-v330.json
+INFO:root:creating an instance of spiceParser
+INFO:root:started reading subckt: .subckt rpposab_pcell_0 minus plus
+
+INFO:root:FOUND resistor
+DEBUG:root:resistance:r2 n2 minus rpposab m=1 l=segl w=segw
+
+INFO:root:FOUND resistor
+DEBUG:root:resistance:r1 n1 n2 rpposab m=1 l=segl w=segw
+
+INFO:root:FOUND resistor
+DEBUG:root:resistance:r0 plus n1 rpposab m=1 l=segl w=segw
+
+INFO:root:Finished reading subckt rpposab_pcell_0
+INFO:root:FOUND transistor
+INFO:root:FOUND transistor
+INFO:root:FOUND transistor
+INFO:root:FOUND subckt instance: segw=2e-6
+INFO:root:FOUND cap
+INFO:root:FOUND transistor
+INFO:root:FOUND transistor
+INFO:root:FOUND transistor
+INFO:root:FOUND transistor
+INFO:root:FOUND transistor
+INFO:root:NO subckt defined, checking for any instance at top
+INFO:root:Instances found at top, creating a dummy __top__ subckt
+INFO:root:List of subckts in design rpposab_pcell_0 twoStageMiller
+INFO:root:flattening the circuit twoStageMiller
+INFO:root:Net vout internal to subckt
+INFO:root:Net net0239 internal to subckt
+INFO:root:Net gnda internal to subckt
+DEBUG:root:Node name twoStageMiller_mnm48 type: nmos
+INFO:root:Net net0239 internal to subckt
+INFO:root:Net vbn internal to subckt
+INFO:root:Net gnda internal to subckt
+DEBUG:root:Node name twoStageMiller_mnm7 type: nmos
+INFO:root:Net vbn internal to subckt
+INFO:root:Net vbn internal to subckt
+INFO:root:Net gnda internal to subckt
+DEBUG:root:Node name twoStageMiller_mnm6 type: nmos
+INFO:root:Net net0239 internal to subckt
+INFO:root:Net net087 internal to subckt
+INFO:root:Net rpposab_pcell_0 internal to subckt
+INFO:root:Net m=1 internal to subckt
+INFO:root:Net segl=10e-6 internal to subckt
+DEBUG:root:Node name twoStageMiller_xr1 type: segw=2e-6
+INFO:root:Net net087 internal to subckt
+INFO:root:Net vout internal to subckt
+DEBUG:root:Node name twoStageMiller_c0 type: cap
+INFO:root:Net as_ibpd_1u internal to subckt
+INFO:root:Net as_ibpd_1u internal to subckt
+INFO:root:Net vdda internal to subckt
+DEBUG:root:Node name twoStageMiller_mpm3 type: pmos
+INFO:root:Net nwell_diff internal to subckt
+INFO:root:Net as_ibpd_1u internal to subckt
+INFO:root:Net vdda internal to subckt
+DEBUG:root:Node name twoStageMiller_mpm4 type: pmos
+INFO:root:Net net0239 internal to subckt
+INFO:root:Net vinp internal to subckt
+INFO:root:Net nwell_diff internal to subckt
+DEBUG:root:Node name twoStageMiller_mpm1 type: pmos
+INFO:root:Net vout internal to subckt
+INFO:root:Net as_ibpd_1u internal to subckt
+INFO:root:Net vdda internal to subckt
+DEBUG:root:Node name twoStageMiller_mpm5 type: pmos
+INFO:root:Net vbn internal to subckt
+INFO:root:Net vinn internal to subckt
+INFO:root:Net nwell_diff internal to subckt
+DEBUG:root:Node name twoStageMiller_mpm0 type: pmos
+INFO:root:Total no of nodes in design twoStageMiller= 10
+INFO:root:Creating bipartitie graph with Total no of devices 10
+DEBUG:matplotlib:matplotlib data path: /home/yangzhe/work/.venv/lib/python3.12/site-packages/matplotlib/mpl-data
+DEBUG:matplotlib:CONFIGDIR=/home/yangzhe/.config/matplotlib
+DEBUG:matplotlib:interactive is False
+DEBUG:matplotlib:platform is linux
+DEBUG:matplotlib:CACHEDIR=/home/yangzhe/.cache/matplotlib
+DEBUG:matplotlib.font_manager:Using fontManager instance from /home/yangzhe/.cache/matplotlib/fontlist-v390.json
+INFO:root:creating an instance of spiceParser
+INFO:root:started reading subckt: .subckt rpposab_pcell_0 minus plus
+
+INFO:root:FOUND resistor
+DEBUG:root:resistance:r2 n2 minus rpposab m=1 l=segl w=segw
+
+INFO:root:FOUND resistor
+DEBUG:root:resistance:r1 n1 n2 rpposab m=1 l=segl w=segw
+
+INFO:root:FOUND resistor
+DEBUG:root:resistance:r0 plus n1 rpposab m=1 l=segl w=segw
+
+INFO:root:Finished reading subckt rpposab_pcell_0
+INFO:root:FOUND transistor
+INFO:root:FOUND transistor
+INFO:root:FOUND transistor
+INFO:root:FOUND subckt instance: segw=2e-6
+INFO:root:FOUND cap
+INFO:root:FOUND transistor
+INFO:root:FOUND transistor
+INFO:root:FOUND transistor
+INFO:root:FOUND transistor
+INFO:root:FOUND transistor
+INFO:root:NO subckt defined, checking for any instance at top
+INFO:root:Instances found at top, creating a dummy __top__ subckt
+INFO:root:List of subckts in design rpposab_pcell_0 twoStageMiller
+INFO:root:flattening the circuit twoStageMiller
+INFO:root:Net vout internal to subckt
+INFO:root:Net net0239 internal to subckt
+INFO:root:Net gnda internal to subckt
+DEBUG:root:Node name twoStageMiller_mnm48 type: nmos
+INFO:root:Net net0239 internal to subckt
+INFO:root:Net vbn internal to subckt
+INFO:root:Net gnda internal to subckt
+DEBUG:root:Node name twoStageMiller_mnm7 type: nmos
+INFO:root:Net vbn internal to subckt
+INFO:root:Net vbn internal to subckt
+INFO:root:Net gnda internal to subckt
+DEBUG:root:Node name twoStageMiller_mnm6 type: nmos
+INFO:root:Net net0239 internal to subckt
+INFO:root:Net net087 internal to subckt
+INFO:root:Net rpposab_pcell_0 internal to subckt
+INFO:root:Net m=1 internal to subckt
+INFO:root:Net segl=10e-6 internal to subckt
+DEBUG:root:Node name twoStageMiller_xr1 type: segw=2e-6
+INFO:root:Net net087 internal to subckt
+INFO:root:Net vout internal to subckt
+DEBUG:root:Node name twoStageMiller_c0 type: cap
+INFO:root:Net as_ibpd_1u internal to subckt
+INFO:root:Net as_ibpd_1u internal to subckt
+INFO:root:Net vdda internal to subckt
+DEBUG:root:Node name twoStageMiller_mpm3 type: pmos
+INFO:root:Net nwell_diff internal to subckt
+INFO:root:Net as_ibpd_1u internal to subckt
+INFO:root:Net vdda internal to subckt
+DEBUG:root:Node name twoStageMiller_mpm4 type: pmos
+INFO:root:Net net0239 internal to subckt
+INFO:root:Net vinp internal to subckt
+INFO:root:Net nwell_diff internal to subckt
+DEBUG:root:Node name twoStageMiller_mpm1 type: pmos
+INFO:root:Net vout internal to subckt
+INFO:root:Net as_ibpd_1u internal to subckt
+INFO:root:Net vdda internal to subckt
+DEBUG:root:Node name twoStageMiller_mpm5 type: pmos
+INFO:root:Net vbn internal to subckt
+INFO:root:Net vinn internal to subckt
+INFO:root:Net nwell_diff internal to subckt
+DEBUG:root:Node name twoStageMiller_mpm0 type: pmos
+INFO:root:Total no of nodes in design twoStageMiller= 10
+INFO:root:Creating bipartitie graph with Total no of devices 10
+DEBUG:matplotlib:matplotlib data path: /home/yangzhe/work/.venv/lib/python3.12/site-packages/matplotlib/mpl-data
+DEBUG:matplotlib:CONFIGDIR=/home/yangzhe/.config/matplotlib
+DEBUG:matplotlib:interactive is False
+DEBUG:matplotlib:platform is linux
+DEBUG:matplotlib:CACHEDIR=/home/yangzhe/.cache/matplotlib
+DEBUG:matplotlib.font_manager:Using fontManager instance from /home/yangzhe/.cache/matplotlib/fontlist-v390.json
+INFO:root:creating an instance of spiceParser
+INFO:root:started reading subckt: .subckt rpposab_pcell_0 minus plus
+
+INFO:root:FOUND resistor
+DEBUG:root:resistance:r2 n2 minus rpposab m=1 l=segl w=segw
+
+INFO:root:FOUND resistor
+DEBUG:root:resistance:r1 n1 n2 rpposab m=1 l=segl w=segw
+
+INFO:root:FOUND resistor
+DEBUG:root:resistance:r0 plus n1 rpposab m=1 l=segl w=segw
+
+INFO:root:Finished reading subckt rpposab_pcell_0
+INFO:root:FOUND transistor
+INFO:root:FOUND transistor
+INFO:root:FOUND transistor
+INFO:root:FOUND subckt instance: segw=2e-6
+INFO:root:FOUND cap
+INFO:root:FOUND transistor
+INFO:root:FOUND transistor
+INFO:root:FOUND transistor
+INFO:root:FOUND transistor
+INFO:root:FOUND transistor
+INFO:root:NO subckt defined, checking for any instance at top
+INFO:root:Instances found at top, creating a dummy __top__ subckt
+INFO:root:List of subckts in design rpposab_pcell_0 twoStageMiller
+INFO:root:flattening the circuit twoStageMiller
+INFO:root:Net vout internal to subckt
+INFO:root:Net net0239 internal to subckt
+INFO:root:Net gnda internal to subckt
+DEBUG:root:Node name twoStageMiller_mnm48 type: nmos
+INFO:root:Net net0239 internal to subckt
+INFO:root:Net vbn internal to subckt
+INFO:root:Net gnda internal to subckt
+DEBUG:root:Node name twoStageMiller_mnm7 type: nmos
+INFO:root:Net vbn internal to subckt
+INFO:root:Net vbn internal to subckt
+INFO:root:Net gnda internal to subckt
+DEBUG:root:Node name twoStageMiller_mnm6 type: nmos
+INFO:root:Net net0239 internal to subckt
+INFO:root:Net net087 internal to subckt
+INFO:root:Net rpposab_pcell_0 internal to subckt
+INFO:root:Net m=1 internal to subckt
+INFO:root:Net segl=10e-6 internal to subckt
+DEBUG:root:Node name twoStageMiller_xr1 type: segw=2e-6
+INFO:root:Net net087 internal to subckt
+INFO:root:Net vout internal to subckt
+DEBUG:root:Node name twoStageMiller_c0 type: cap
+INFO:root:Net as_ibpd_1u internal to subckt
+INFO:root:Net as_ibpd_1u internal to subckt
+INFO:root:Net vdda internal to subckt
+DEBUG:root:Node name twoStageMiller_mpm3 type: pmos
+INFO:root:Net nwell_diff internal to subckt
+INFO:root:Net as_ibpd_1u internal to subckt
+INFO:root:Net vdda internal to subckt
+DEBUG:root:Node name twoStageMiller_mpm4 type: pmos
+INFO:root:Net net0239 internal to subckt
+INFO:root:Net vinp internal to subckt
+INFO:root:Net nwell_diff internal to subckt
+DEBUG:root:Node name twoStageMiller_mpm1 type: pmos
+INFO:root:Net vout internal to subckt
+INFO:root:Net as_ibpd_1u internal to subckt
+INFO:root:Net vdda internal to subckt
+DEBUG:root:Node name twoStageMiller_mpm5 type: pmos
+INFO:root:Net vbn internal to subckt
+INFO:root:Net vinn internal to subckt
+INFO:root:Net nwell_diff internal to subckt
+DEBUG:root:Node name twoStageMiller_mpm0 type: pmos
+INFO:root:Total no of nodes in design twoStageMiller= 10
+INFO:root:Creating bipartitie graph with Total no of devices 10

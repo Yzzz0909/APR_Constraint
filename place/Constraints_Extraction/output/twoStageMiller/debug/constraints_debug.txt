@@ -1,0 +1,25 @@
+[BootstrapCap_rotate_target] valid_matches=2
+  match1: {'0': 'c0'}
+  match2: {'0': 'c0'}
+[CurrentMirror_target] valid_matches=1
+  match1: {'0': 'mnm6', '3': 'mnm7'}
+[CurrentMirror_pmos_target] valid_matches=2
+  match1: {'0': 'mpm3', '3': 'mpm4'}
+  match2: {'0': 'mpm3', '3': 'mpm5'}
+[Load_pmos_target] valid_matches=2
+  match1: {'0': 'mpm4', '4': 'mpm5'}
+  match2: {'0': 'mpm5', '4': 'mpm4'}
+[DifferentialPair_pmos_target] valid_matches=2
+  match1: {'0': 'mpm1', '4': 'mpm0'}
+  match2: {'0': 'mpm0', '4': 'mpm1'}
+[coverage_audit]
+  status=need_review
+  risks=['unconstrained_top_level_devices']
+  total_top_level=10
+  constrained=9
+  unconstrained=1
+  coverage_ratio=90.00%
+  type=instance_or_passive total=2 unconstrained=1
+    missing=['xr1']
+  type=nmos total=3 unconstrained=0
+  type=pmos total=5 unconstrained=0

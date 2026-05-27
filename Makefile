@@ -10,7 +10,7 @@ PIP := $(VENV_DIR)/bin/pip
 
 BUILD_ARGS := $(filter-out build,$(MAKECMDGOALS))
 
-.PHONY: build all SubgraphMatching-master Constraints_Extraction build-all build-python build-cpp shell setup clean
+.PHONY: build all SubgraphMatching-master Constraints_Extraction build-all build-python build-cpp shell setup run clean
 
 build:
 ifeq ($(BUILD_ARGS),)
@@ -22,6 +22,9 @@ endif
 all: build-all
 
 setup: build-all shell
+
+run:
+	@cd "$(PY_DIR)" && "$(PYTHON)" spice_annotation.py circuit.json
 
 SubgraphMatching-master: build-cpp
 
@@ -42,6 +45,10 @@ build-python:
 	@echo "[2/2] Prepare Python environment"
 	@if [ ! -d "$(VENV_DIR)" ]; then \
 		python3 -m venv "$(VENV_DIR)"; \
+	elif ! grep -q "VIRTUAL_ENV=.*$(VENV_DIR)" "$(VENV_DIR)/bin/activate" 2>/dev/null; then \
+		echo "Detected stale venv path, recreating $(VENV_DIR)"; \
+		rm -rf "$(VENV_DIR)"; \
+		python3 -m venv "$(VENV_DIR)"; \
 	fi
 	@$(PYTHON) -m pip install --upgrade pip
 	@$(PIP) install -r "$(ROOT_DIR)/requirements.txt"
@@ -49,7 +56,7 @@ build-python:
 	@echo "Enter it with: make shell"
 
 shell:
-	@bash -lc 'source "$(VENV_DIR)/bin/activate" && cd "$(PLACE_DIR)" && exec bash'
+	@bash --noprofile --norc -c 'source "$(VENV_DIR)/bin/activate" && cd "$(ROOT_DIR)" && exec bash --noprofile --norc'
 
 clean:
 	@echo "No default clean action. Remove .venv or place/SubgraphMatching-master/build manually if needed."
